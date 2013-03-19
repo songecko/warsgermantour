@@ -1,0 +1,722 @@
+º@charset "utf-8";
+
+/*----------estilos general----------*/
+html {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	margin:0;
+	padding:0;
+}
+	
+#contenedor{
+	margin:0 auto;
+	width:100%;
+}
+
+#contentSections{
+	padding:20px 0 0 0;
+	margin: 0 auto;
+	width:960px;
+}
+
+#nav{
+	font-size:20px;
+	color:#FFF;
+	position:absolute;
+	background-image:url(../images/header.png);
+	width:960px;
+	height:189px;
+	z-index:7000;
+}
+
+#nav ul li{
+	margin:0 0 0 30px;
+	list-style:none;
+	float:left;
+	cursor:pointer;
+}
+
+.btnIz{
+	margin:80px 0 0 80px;
+	width:300px;
+}
+
+.btnDe{
+	margin:80px 0 0 530px;
+	width:300px;
+}
+
+.pixel{
+	background-image:url(../images/pixel.jpg);
+	position:absolute;
+	margin:64px 0 0 0;
+	width:100%;
+	height:58px;
+	z-index:1;
+}
+
+#nav a{
+	color:#FFF;
+	text-decoration:none;
+}
+
+#nav a:hover{
+	color:#ff0000;
+	text-decoration:none;
+}
+
+.navSelect{
+	color:#ff0000;
+}
+
+.avatarHeader{
+	position:absolute;
+	margin:10px 0 0 0;
+	width:300px;
+	height:44px;
+	float:left;
+}
+
+.imagenHeader{
+	text-align:center;
+	box-shadow: 0 2px 2px #000;
+	float:left;
+	width:38px;
+	height:38px;
+}
+
+.numberHeader{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:45px;
+	text-shadow: 1px 1px 1px #000;
+	color:#fcefcd;
+	float:left;
+	margin:-10px 10px 0 10px;
+}
+
+.nombreHeader{
+	font-size:13px;
+	margin-top:5px;
+	color:#fff;
+}
+
+.twitNumberHeader{
+	font-size:11px;
+}
+
+.socialHeader{
+	position:absolute;
+	margin:10px 0 0 680px;
+	width:340px;
+	height:44px;
+	float:left;
+	z-index:9999;
+}
+
+.facebook{
+	float:left;
+	width:69px;
+	height:22px;
+}
+
+.twitter{
+	float:left;
+	width:90px;
+	height:22px;
+}
+
+.compartir{
+	float:left;
+	width:130px;
+	height:22px;
+}
+
+/*----------estilos twitear----------*/
+
+#twitear{
+	background-image:url(../images/bg1.jpg);
+	width:100%;
+	height:926px;
+}
+
+.indicadorTwitear{
+	background-image:url(../images/indicador.png);
+	position:absolute;
+	margin:122px 0 0 153px;
+	width:88px;
+	height:15px;
+}
+
+.titleTwitear{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:30px;
+	color:#FFF;
+	position:absolute;
+	margin:200px 0 0 0;
+	width:800px;
+	text-shadow: 1px 1px 1px #000;
+	vertical-align:top;
+}
+
+.campoTwit{
+	background-image:url(../images/cuadroTwit.png);
+	position:absolute;
+	margin:270px 0 0 0;
+	padding:10px;
+	width:768px;
+	height:116px;
+	float:left;
+}
+
+textarea{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:25px;
+	background:transparent;
+	border:none;
+	width:745px;
+	height:100px;
+}
+
+.avatar{
+	position:absolute;
+	margin:205px 0 0 800px;
+	width:130px;
+	height:245px;
+	float:left;
+}
+
+.imagen{
+	text-align:center;
+	box-shadow: 0 2px 2px #000;
+}
+
+.number{
+	text-align:center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:60px;
+	text-shadow: 1px 1px 1px #000;
+	color:#fcefcd;
+}
+
+.nombre{
+	margin-top:5px;
+	text-align:center;
+	color:#fff;
+}
+
+.twitNumber{
+	text-align:center;
+	font-size:11px;
+}
+
+.avatarTopFive .twitNumber
+{
+	color: #FFFFFF;
+}
+
+.avatarUserRanking .twitNumberRanking
+{
+	margin: 0;
+    text-align: center;
+}
+
+.hastag{
+	font-size:16px;
+	position:absolute;
+	margin:425px 0 0 230px;
+	color:#fff;
+	float:left;
+}
+
+.colorhastag{
+	color:#02c0f2;
+}
+
+.btnEnviar{
+	position:absolute;
+	margin:410px 0 0 550px;
+	float:left;
+	border:none;
+}
+
+.topFive{
+	text-shadow: 1px 1px 1px #000;
+	position:absolute;
+	margin:560px 0 0 0;
+	width:300px;
+	height:100px;
+	float:left;
+}
+
+.textopFive{
+	text-align:center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:35px;
+	text-shadow: 1px 1px 1px #000;
+	color:#fff;
+	margin:0 0 10px 0;
+}
+
+.colortopFive{
+	color:#ff0001;
+}
+
+.flechaTopFive{
+	background-image:url(../images/flecha.png);
+	position:absolute;
+	margin:560px 0 0 292px;
+	width:65px;
+	height:123px;
+	float:left;
+}
+
+.avatares{
+	position:absolute;
+	margin:510px 0 0 400px;
+	width:538px;
+	height:200px;
+	float:left;
+}
+
+.avatarTopFive{
+	margin:0 0 0 11px;
+	width:95px;
+	height:245px;
+	float:left;
+}
+
+.imagen1{
+	width:95px;
+	height:94px;
+	margin:0 auto;
+	box-shadow: 1px 2px 2px #000;
+}
+
+.number1{
+	text-align:center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:38px;
+	text-shadow: 1px 1px 1px #000;
+	color:#fcefcd;
+	margin: 0 0 10px 0;
+}
+
+.footerSection1{
+	position:absolute;
+	margin:750px 0 0 200px;
+	width:613px;
+	height:104px;
+}
+
+.gorilla{
+	background-image:url(../images/gorilla1.png);
+	width:121px;
+	height:104px;
+	float:left;
+}
+
+.textGorilla{
+	font-size:14px;
+	background-image:url(../images/cuadroFooter.png);
+	padding:13px 0 0 30px;
+	width:439px;
+	height:31px;
+	float:left;
+	color:#fff;
+}
+
+/*----------estilos ranking----------*/
+
+#ranking{
+	background-image:url(../images/bg2.jpg);
+	width:100%;
+	height:1243px;
+}
+
+.indicadorRanking{
+	background-image:url(../images/indicador.png);
+	position:absolute;
+	margin:122px 0 0 271px;
+	width:88px;
+	height:15px;
+}
+
+.contentRankingIz{
+	position:absolute;
+	margin:220px 0 0 0;
+	width:641px;
+	height:817px;
+	float:left;
+}
+
+.titleRanking{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:42px;
+	color:#000;
+	position:absolute;
+	margin:0 0 0 0;
+	width:400px;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+.textRanking{
+	font-size:15px;
+	color:#0626262;
+	position:absolute;
+	margin:40px 0 0 0;
+	width:614px;
+}
+
+.twitNumberRanking{
+	margin:10px 0 0 475px;
+	font-size:14px;
+}
+
+.userRanking{
+	position:absolute;
+	margin:100px 0 0 0;
+	width:621px;
+	height:200px;
+	float:left;
+}
+
+.avatarUserRanking{
+	margin:0 0 0 28px;
+	width:95px;
+	height:210px;
+	float:left;
+}
+
+.imagenUserRanking{
+	width:95px;
+	height:94px;
+	margin:0 auto;
+	box-shadow: 1px 2px 2px #000;
+}
+
+.numberUserRanking{
+	text-align:center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:38px;
+	text-shadow: 1px 1px 1px #000;
+	color:#ff3334;
+	margin: 0 0 10px 0;
+}
+
+.nombreUserRanking{
+	margin-top:5px;
+	text-align:center;
+	color:#000;
+}
+
+.footerSection2{
+	position:absolute;
+	margin:1108px 0 0 200px;
+	width:613px;
+	height:104px;
+}
+
+.contentRankingDe{
+	position:absolute;
+	margin:220px 0 0 680px;
+	width:300px;
+	height:817px;
+	float:left;
+}
+
+.tweetXtweet{
+	background-image:url(../images/imaTweetxTweet.png);
+	margin:0 0 0 0;
+	width:299px;
+	height:86px;
+}
+
+.campoTwitter{
+	background-image:url(../images/cuadroTweets.png);
+	margin:20px 0 0 0;
+	padding:10px;
+	width:254px;
+	height:401px;
+}
+
+.textareaTweet{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:15px;
+	background:transparent;
+	border:none;
+	width:254px;
+	height:380px;
+}
+
+.lenguaRanking{
+	background-image:url(../images/lengua.png);
+	margin:20px 0 0 23px;
+	width:56px;
+	height:64px;
+	float:left;
+}
+
+.hastagRanking{
+	font-size:14px;
+	margin:25px 0 0 10px;
+	width:100px;
+	float:left;
+}
+
+.hastagUniversal{
+	background-image:url(../images/imaSegui.png);
+	position:absolute;
+	margin:110px 0 0 0;
+	width:348px;
+	height:136px;
+}
+
+.codigo{
+	background-image:url(../images/campoCodigo.png);
+	position:absolute;
+	margin:215px 0 0 23px;
+	padding-top:1px;
+	width:241px;
+	height:42px;
+	z-index:20;
+}
+
+.inputCode{
+	font-size:12px;
+	background:transparent;
+	border:none;
+	width:127px;
+	height:23px;
+	margin:3px 0 0 10px;
+	float:left;
+}
+
+/*----------estilos permios----------*/
+
+#premios{
+	background-image:url(../images/bg3.jpg);
+	width:100%;
+	height:1043px;
+}
+
+.indicadorPremios{
+	background-image:url(../images/indicador.png);
+	position:absolute;
+	margin:122px 0 0 600px;
+	width:88px;
+	height:15px;
+}
+
+.titlePremios{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:42px;
+	color:#fff;
+	position:absolute;
+	margin:220px 0 0 195px;
+	width:600px;
+	text-shadow: 1px 1px 1px #fff;
+	vertical-align:top;
+}
+
+.textPremios{
+	text-align:center;
+	font-size:17px;
+	color:#fff;
+	position:absolute;
+	margin:320px 0 0 80px;
+	width:800px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+iframe{
+	position:absolute;
+	margin:-9px 0 0 -7px;
+	width:273px;
+	height:400px;
+}
+
+.iframePremios{
+	position:absolute;
+	margin:350px 0 0 0;
+	width:1000px;
+	height:507px;
+}
+
+.footerSection3{
+	position:absolute;
+	margin:880px 0 0 200px;
+	width:613px;
+	height:104px;
+}
+ 
+/*----------estilos grrr----------*/
+
+#grrr{
+	background-image:url(../images/bg4.jpg);
+	width:100%;
+	height:1446px;
+}
+
+.indicadorGrrr{
+	background-image:url(../images/indicador.png);
+	position:absolute;
+	margin:122px 0 0 705px;
+	width:88px;
+	height:15px;
+}
+
+.gorillaHand{
+	background-image: url(../images/imaMano.png);
+	position: absolute;
+	margin: 57px 0 0 32px;
+	width: 58px;
+	height: 51px;
+	z-index: 999;
+}
+
+.gorillaBody{
+	background-image: url(../images/gorilla2.png);
+	position: absolute;
+	margin: 122px 0 0 -80px;
+	width: 320px;
+	height: 688px;
+	float:left;
+}
+
+.contentGrrr{
+	position: absolute;
+	margin: 270px 0 0 250px;
+	width: 738px;
+	height: 873px;
+	float:left;
+}
+
+.titleGrrr{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:60px;
+	color:#000;
+	position:absolute;
+	width:550px;
+	text-shadow: 1px 1px 1px #fff;
+	line-height: 1em;
+}
+
+.titleGrrrRed{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:97px;
+	color:#fe3336;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.textGrrr{
+	text-align:center;
+	font-size:13px;
+	color:#000;
+	position:absolute;
+	margin:270px 0 0 -9px;
+	width:650px;
+}
+
+.album{
+	background-image: url(../images/imaAlbum.png);
+	margin: 260px 0 0 0;
+	width: 758px;
+	height: 331px;
+}
+
+.imaAlbum{
+	background-image: url(../images/imaDisco.png);
+	margin: 0 10px 0 0;
+	width: 157px;
+	height: 118px;
+	float:left;
+}
+
+.titleExplicacionGrrr{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:25px;
+	color:#fe3336;
+	text-shadow: 1px 1px 1px #fff;
+	font-weight:bold;
+}
+
+.explicacionGrrr{
+	font-size:13px;
+	color:#000;
+	margin:10px 0 0 0;
+	float:left;
+	width: 509px;
+}
+
+.tweet{
+	background-image: url(../images/imaTweet.png);
+	margin: 10px 10px 0 -30px;
+	width: 458px;
+	height: 109px;
+	float:left;
+}
+
+.btnAppstore{
+	position:absolute;
+	margin:240px 0 0 170px;
+	float:left;
+}
+
+.btnGooglePlay{
+	position:absolute;
+	margin:240px 0 0 300px;
+	float:left;
+}
+
+.btnItunes{
+	position:absolute;
+	margin:240px 0 0 433px;
+	float:left;
+}
+
+.textFooter{
+	vertical-align:top;
+	font-size: 12px;
+	color: #fff;
+	position: absolute;
+	margin: 1280px 0 0 0;
+	width: 450px;
+	float:left;
+}
+
+.textBases{
+	vertical-align:top;
+	font-size: 12px;
+	color: #fff;
+	position: absolute;
+	margin: 1280px 0 0 870px;
+	width: 150px;
+	float:left;
+}
+
+.textBases a{
+	color:#FFF;
+	text-decoration:none;
+}
+
+.textBases a:hover{
+	color:#ff0000;
+	text-decoration:none;
+}
+
+.redesSociales{
+	position: absolute;
+	margin: 1330px 0 0 30px;
+	width: 926px;
+	float:left;
+}
+
+.btnLoginPopup{
+	position:absolute;
+	left: 126px;
+    top: 483px;
+}

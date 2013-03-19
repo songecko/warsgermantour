@@ -1,0 +1,178 @@
+º@charset "utf-8";
+
+/*----------estilos general----------*/
+html {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background-image:url(../images/bg_mobile.jpg);
+	font-family: 'Lato', sans-serif;
+}
+	
+#contenedor{
+	margin:0 auto;
+	width:100%;
+}
+
+#contentSections{
+	padding:5px 0 0 0;
+	margin: 0 auto;
+	width:100%;
+}
+
+#nav{
+	margin:0 0 0 100px;
+	color:#FFF;
+	position:absolute;
+	background-image:url(../images/header_mobile.png);
+	width:99px;
+	height:99px;
+	z-index:20;
+}
+
+.pixel{
+	background-image:url(../images/pixel_mobile.jpg);
+	position:absolute;
+	margin:33px 0 0 -8px;
+	width:100%;
+	height:32px;
+	z-index:1;
+}
+
+.titleTwitear{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	color: #FFF;
+	position: absolute;
+	margin: 120px 0 0 0;
+	text-shadow: 1px 1px 1px #000;
+	text-align: center;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+.paso1{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	position: absolute;
+	margin: 210px 0 10px 0;
+	vertical-align:text-top;
+	padding-right: 20px;
+}
+
+.paso2{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	position: absolute;
+	margin: 270px 0 0 0;
+	vertical-align:text-top;
+	padding-right: 20px;
+}
+
+.paso3{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	position: absolute;
+	margin: 330px 0 10px 0;
+	vertical-align:text-top;
+	padding-right: 20px;
+}
+
+.resaltado{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 13px;
+	color: #f8303d;
+	font-weight:bold;
+}
+
+.imagen{
+	float:left;
+	margin-right:5px;
+}
+
+.pajaro{
+	background-image: url(../images/pajarito.png);
+	position: absolute;
+	margin:330px 0 0 220px;
+	width: 82px;
+	height: 85px;
+	z-index: 50;
+}
+
+.btnTwitter{
+	position: absolute;
+	margin:430px 0 0 50px;
+	z-index: 50;
+}
+
+.sombra{
+	background-image: url(../images/sombra.png);
+	background-repeat:no-repeat;
+	position: absolute;
+	margin:470px 0 0 0;
+	width: 305px;
+	height: 35px;
+	z-index: 1;
+}
+
+/*respuesta*/
+
+
+.titleRespuesta{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #FFF;
+	position: absolute;
+	margin: 120px 0 0 0;
+	text-shadow: 1px 1px 1px #000;
+	text-align: center;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+a{
+	color: #00beee;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+
+.hashtag{
+	background-image: url(../images/hashtag.png);
+	position: absolute;
+	margin: 205px 0 0 0;
+	width:295px;
+	height:67px;
+}
+
+.text1{
+	text-align:center;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	color: #FFF;
+	position: absolute;
+	margin: 280px 0 0 0;
+	vertical-align: text-top;
+	padding-right: 20px;
+	left: 6px;
+	top: 12px;
+}
+
+.resaltado1{
+	color: #00beee;
+	font-weight:bold;
+}
+
+.premios{
+	background-image: url(../images/premios.png);
+	background-repeat:no-repeat;
+	position: absolute;
+	margin: 410px 0 0 0;
+	width:295px;
+	height:144px;
+}

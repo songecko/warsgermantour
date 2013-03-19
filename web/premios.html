@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<!--<link href="css/main.css" rel="stylesheet" type="text/css" />-->
+
+<!--<script type="text/javascript" src="js/unitpngfix/unitpngfix.js"></script>-->
+
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript" src="js/parallax/jquery.event.frame.js"></script>
+<script type="text/javascript" src="js/parallax/jquery.jparallax.js"></script>
+
+
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#parallax').jparallax({});
+		});
+		
+		function irPortafolio(){
+			window.parent.location.href="#contProfile";	
+		}
+		
+		jQuery(function() {
+                jQuery('.clickAnimate').bind('click',function(event){
+                    var $anchor = jQuery(this);
+					window.parent.irA($anchor.attr('href'));
+                });
+            });
+		
+	</script>
+    
+   
+   <style>
+   
+   #parallax {
+	margin:0 auto;
+	position:relative; 
+	overflow:hidden;
+	width:980px; 
+	height:497px;
+}
+	
+#contenedor{
+	margin: 0 auto;
+	width:980px;
+}
+ 
+ 
+   </style>
+   
+</head>
+
+<body>
+
+    <div id="parallax">
+   		<div style="width: 970px; height: 497px;"><img style="position:absolute; top:10px; left:10px;" alt="" src="images/bgPremios.png"/></div> 
+		<div style="width: 990px; height: 497px;"><img style="position:absolute; top:150px; left:50px;" alt="" src="images/premio6.png"/></div>  
+		<div style="width: 960px; height: 497px;"><img style="position:absolute; top:155px; left:183px;" alt="" src="images/premio5.png"/></div>
+		<div style="width: 950px; height: 497px;"><img style="position:absolute; top:88px; left:320px;" alt="" src="images/premio1.png"/></div>
+   		
+	</div>
+</body>
+</html>
