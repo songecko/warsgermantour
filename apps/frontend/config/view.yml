@@ -27,6 +27,7 @@ default:
 #    - "http://platform.twitter.com/anywhere.js?id=<?php echo sfConfig::get('app_twitter_api_key') ?>&v=1"
     - jquery.qtip.min.js
     - jquery.fancybox.pack.js
+    - sfFacebook.js
 
   has_layout:     true
   layout:         layout

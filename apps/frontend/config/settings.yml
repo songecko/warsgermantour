@@ -47,3 +47,4 @@ all:
       - default
       - sfGuardAuth
       - sfGuardForgotPassword
+      - sfFacebookConnectAuth

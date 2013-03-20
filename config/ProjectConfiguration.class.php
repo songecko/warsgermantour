@@ -12,7 +12,8 @@ class ProjectConfiguration extends sfProjectConfiguration
 			'sfDoctrineGuardPlugin',
 			'sfAdminDashPlugin',
 			'sfCsvPlugin',
-    		'sfPhirehosePlugin'
+    		'sfPhirehosePlugin',
+			'sfFacebookConnectPlugin'
 		));
 	}
 }

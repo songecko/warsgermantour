@@ -1,0 +1,3 @@
+facebook_signin:
+  url:   /facebook/signin
+  param: { module: sfFacebookConnectAuth, action: signin }

@@ -9,7 +9,7 @@
     <?php include_javascripts() ?>
     
     <script type="text/javascript">
-	    <?php if(!$sf_user->isAuthenticated()):?>
+	    <?php /*if(!$sf_user->isAuthenticated()):?>
 	    $(document).ready(function() {
 			$.fancybox.open($('#login_popup'), {
 				modal: true,
@@ -19,19 +19,11 @@
 				height: 559
 			});
 	    });
-	    <?php endif; ?>
+	    <?php endif;*/ ?>
 	</script>
   </head>
   <body>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=<?php echo sfConfig::get('app_facebook_api_key') ?>";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
 	
     <?php echo $sf_content ?>
 	
@@ -42,5 +34,6 @@
 		<div class="btnLoginPopup"><a href="<?php echo url_for('twitter_signin') ?>" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','<?php echo image_path('btnTwitterOn.png') ?>',1)"><img src="<?php echo image_path('btnTwitter.png') ?>" width="247" height="60" id="Image1" /></a></div>
 	</div>
 	<?php endif; ?>
+	<script type="text/javascript" src="http://connect.facebook.net/es_ES/all.js"></script>
   </body>
 </html>

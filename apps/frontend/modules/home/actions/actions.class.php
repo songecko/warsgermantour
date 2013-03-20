@@ -29,6 +29,8 @@ class homeActions extends sfActions
 	 */
 	public function executeIndex(sfWebRequest $request)
 	{	
+		$this->redirectUnless($this->getUser()->isAuthenticated(), '@facebook_signin?forward='.urlencode($request->getUri()));
+		
 		$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $request->getHttpHeader('User-Agent')) && !$this->getUser()->getAttribute('fullversion', false));
 		if ($isMobile)
 		{
