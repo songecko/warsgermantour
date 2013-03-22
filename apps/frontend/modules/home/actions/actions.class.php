@@ -29,20 +29,40 @@ class homeActions extends sfActions
 	 */
 	public function executeIndex(sfWebRequest $request)
 	{	
+		$signedRequest = sfFacebook::getSignedRequest($request);
+		$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $request->getHttpHeader('User-Agent')) && !$this->getUser()->getAttribute('fullversion', false));		
+		$isOnFacebook = isset($signedRequest['page']['liked']);
+		
+		//if the user is not on facebook and not on mobile, redirect to facebook tab page
+		if(!$isOnFacebook && !$isMobile)
+		{
+			//$this->redirect('https://www.facebook.com/WarsteinerArgentina/app_465909386814672');
+		}
+			
+		//if the user like is on facebook and not like the facenook page, redirect
+		if($isOnFacebook && $signedRequest['page']['liked'] === false)
+		{
+			$this->redirect('prelike');
+		}
+
+		//Check if the user is signed in, if not, sign in with facebook
 		$this->redirectUnless($this->getUser()->isAuthenticated(), '@facebook_signin?forward='.urlencode($request->getUri()));
 		
-		$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $request->getHttpHeader('User-Agent')) && !$this->getUser()->getAttribute('fullversion', false));
+		//Check if the user has the profile
+		$this->redirectUnless($this->getUser()->hasProfile(), 'create_profile');
+		
+		//START THE HOMEPAGE ACTION		
 		if ($isMobile)
 		{
 			$this->setLayout('mobile_layout');
-				
-			if(!$this->getUser()->isAuthenticated())
-			{
-				return 'LoginMobile';
-			}else{
-				return 'SuccessMobile';
-			}
+			
+			return 'SuccessMobile';
 		}
+	}
+		
+	public function executePrelike(sfWebRequest $request)
+	{
+		
 	}
 	
 	public function executeFullVersion(sfWebRequest $request)

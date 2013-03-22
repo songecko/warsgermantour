@@ -1,9 +1,9 @@
 # default values
 all:
   facebook:
-    api_key: 101088859967755
-    api_secret: 6d0f72dbf6f8aad57c6adc19eeca2f50
-    api_id: 101088859967755
+    api_key: 465909386814672
+    api_secret: e3280990bd6ea94aef294463c94c6070
+    api_id: 465909386814672
     redirect_after_connect: false
     redirect_after_connect_url: 'homepage'
     connect_signin_url: 'sfFacebookConnectAuth/signin'

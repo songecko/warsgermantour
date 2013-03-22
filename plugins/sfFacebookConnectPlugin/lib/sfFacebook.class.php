@@ -465,6 +465,10 @@ class sfFacebook
 
     $cookie = self::getFacebookCookie();
     $fb_uid = $cookie['uid'];
+    if(!$fb_uid)
+    {
+    	$fb_uid = self::getUser();    	
+    }
     sfContext::getInstance()->getLogger()->info('{sfFacebookConnect} Fb_uid from cookie : '.$fb_uid);
 
     return $fb_uid;
@@ -493,4 +497,15 @@ class sfFacebook
     return join('&', $parameter_array);
   }
 
+  public static function getSignedRequest(sfWebRequest $request)
+  {
+  	$signed_request = $request->getParameter('signed_request');
+	list($encoded_sig, $payload) = explode('.', $signed_request, 2);
+
+	// decode the data
+	$sig = base64_decode(strtr($encoded_sig, '-_', '+/'));
+	$data = json_decode(base64_decode(strtr($payload, '-_', '+/')), true);
+	
+	return $data;
+  }
 }

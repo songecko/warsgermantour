@@ -14,10 +14,12 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'user_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('user'), 'add_empty' => true)),
+      'facebook_uid'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'twitter_username' => new sfWidgetFormFilterInput(),
       'first_name'       => new sfWidgetFormFilterInput(),
       'last_name'        => new sfWidgetFormFilterInput(),
       'email_address'    => new sfWidgetFormFilterInput(),
+      'email_hash'       => new sfWidgetFormFilterInput(),
       'profile_image'    => new sfWidgetFormFilterInput(),
       'dni'              => new sfWidgetFormFilterInput(),
       'phone_number'     => new sfWidgetFormFilterInput(),
@@ -27,10 +29,12 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'user_id'          => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('user'), 'column' => 'id')),
+      'facebook_uid'     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'twitter_username' => new sfValidatorPass(array('required' => false)),
       'first_name'       => new sfValidatorPass(array('required' => false)),
       'last_name'        => new sfValidatorPass(array('required' => false)),
       'email_address'    => new sfValidatorPass(array('required' => false)),
+      'email_hash'       => new sfValidatorPass(array('required' => false)),
       'profile_image'    => new sfValidatorPass(array('required' => false)),
       'dni'              => new sfValidatorPass(array('required' => false)),
       'phone_number'     => new sfValidatorPass(array('required' => false)),
@@ -57,10 +61,12 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'               => 'Number',
       'user_id'          => 'ForeignKey',
+      'facebook_uid'     => 'Number',
       'twitter_username' => 'Text',
       'first_name'       => 'Text',
       'last_name'        => 'Text',
       'email_address'    => 'Text',
+      'email_hash'       => 'Text',
       'profile_image'    => 'Text',
       'dni'              => 'Text',
       'phone_number'     => 'Text',

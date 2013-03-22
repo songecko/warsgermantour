@@ -13,10 +13,19 @@ send_tweet:
   url:    /send_tweet
   param:  { module: tweet, action: send }
   
+create_profile:
+  url:    /create-profile
+  param:  { module: sfGuardAuth, action: createProfile }
+  
 twitter_signin:
   url:    /twitter-signin
   param:  { module: sfGuardAuth, action: twitterSignin }
   
+prelike:
+  url:    /prelike
+  param:  { module: home, action: prelike }
+
+
 # default rules
 homepage:
   url:    /

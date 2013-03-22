@@ -5,15 +5,14 @@ dev:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      #dsn:      mysql:host=localhost;dbname=rs_db
-      dsn:      mysql:host=200.49.152.14;dbname=rs_db      
-      username: user_rs
-      password: c4r4mbol4
+      dsn:      mysql:host=localhost;dbname=warsgermantour      
+      username: root
+      password: 123456
       
 all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=quieroeldiscorolling
+      dsn:      mysql:host=localhost;dbname=warsgermantour
       username: root
       password: 123456

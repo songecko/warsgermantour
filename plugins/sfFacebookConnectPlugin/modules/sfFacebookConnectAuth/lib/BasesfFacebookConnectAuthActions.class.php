@@ -28,128 +28,93 @@ class BasesfFacebookConnectAuthActions extends sfActions
     return sfView::NONE;
   }
 
-   /**
-   * Sign in with the Facebook account
-   * @author fabriceb
-   * @since 2009-05-17
-   *
-   */
- public function executeSignin(sfWebRequest $request)
-  {
-    $user = $this->getUser();
+	/**
+	* Sign in with the Facebook account
+	* @author fabriceb
+	* @since 2009-05-17
+	*
+	*/
+	public function executeSignin(sfWebRequest $request)
+	{
+		$user = $this->getUser();
+	
+		//first check if user is already logged and not yet Facebook connected
+		if (
+			$user->isAuthenticated()
+			&&
+			!sfFacebook::getGuardAdapter()->getUserFacebookUid($user->getGuardUser())
+			&&
+			sfFacebook::getFacebookClient()->get_loggedin_user()
+			)
+		{
+			$sfGuardUser = $user->getGuardUser();
+			sfFacebook::getGuardAdapter()->setUserFacebookUid($sfGuardUser, sfFacebook::getFacebookClient()->get_loggedin_user());
+			$sfGuardUser->save();
+		}
+		else
+		{
+			$create_automatically = !sfConfig::get('app_facebook_redirect_after_connect', false);
+			$sfGuardUser = sfFacebook::getSfGuardUserByFacebookSession($create_automatically);
+		}
 
-      if(!$this->getRequestParameter('forceLogin'))
-      {
-          return sfView::SUCCESS;
-      }
+		if ($sfGuardUser)
+		{
+			$this->getContext()->getUser()->signIn($sfGuardUser);
 
-      if($this->getRequestParameter('isTwitter') && $twitterScreenName = $this->getRequestParameter('twitterScreenName'))
-      {
-          $tw_cookie = $_COOKIE['twitter_anywhere_identity'];
-        if(isset($tw_cookie))
-        {
-            list($userId, $signature) = explode(":", $tw_cookie);
-            if(sha1($userId.sfConfig::get('app_twitter_consumer_secret')) == $signature)
-            {
-                $sfGuardUser =  sfGuardUserTable::getInstance()->getSfGuardUserByTwitterScreenName($twitterScreenName, true);
-                if (!$sfGuardUser instanceof sfGuardUser)
-                {
-                      $sfGuardUser = sfGuardUserTable::getInstance()->createSfGuardUserWithTwitterScreenName($twitterScreenName);
-                }
+			$referer = $user->getAttribute('referer', $this->getRequest()->getReferer());
+			$user->getAttributeHolder()->remove('referer');
 
-                if ($sfGuardUser)
-                {
-                    $this->getUser()->signIn($sfGuardUser);
+			$signin_url = sfConfig::get('app_sf_guard_plugin_success_signin_url', $referer);
 
-                    $referer = $user->getAttribute('referer', $this->getRequest()->getReferer());
-                    $user->getAttributeHolder()->remove('referer');
+			$forward = $request->getParameter('forward');
 
-                    $signin_url = sfConfig::get('app_sf_guard_plugin_success_signin_url', $referer);
+			$signin_url = $forward != '' ? $forward : $signin_url;
 
-                    $forward = $this->getRequestParameter('forward');
+			$this->redirect('' != $signin_url ? $signin_url : '@homepage');
+		}
+		
+		// check if user forgot to activate the account
+		$sfGuardUser = sfFacebook::getSfGuardUserByFacebookSession($create_automatically, false);
 
-                    $signin_url = $forward != '' ? $forward : $signin_url;
+		// the user does not exist even in unactivated mode
+		if (!$sfGuardUser)
+		{
+			if ($this->getRequest()->isXmlHttpRequest())
+			{
+				$this->getResponse()->setHeaderOnly(true);
+				$this->getResponse()->setStatusCode(401);
 
-                    $this->redirect('' != $signin_url ? $signin_url : '@homepage');
-                }
-            }
-        }
+				return sfView::NONE;
+			}
 
-        //If the twitter connection didn't was succesful, then redirecto to the connect options screen
-        return sfView::SUCCESS;
-      }
+			if (!$user->hasAttribute('referer'))
+			{
+				if($request->getParameter('forward', false))
+				{
+					$user->setAttribute('referer', $request->getParameter('forward'));
+				}else
+				{
+					$user->setAttribute('referer', $this->getRequest()->getUri());
+				}
+			}
 
-    // first check if user is already logged and not yet Facebook connected
-    if (
-      $user->isAuthenticated()
-      &&
-      !sfFacebook::getGuardAdapter()->getUserFacebookUid($user->getGuardUser())
-      &&
-      sfFacebook::getFacebookClient()->get_loggedin_user()
-      )
-    {
-      $sfGuardUser = $user->getGuardUser();
-      sfFacebook::getGuardAdapter()->setUserFacebookUid($sfGuardUser, sfFacebook::getFacebookClient()->get_loggedin_user());
-      $sfGuardUser->save();
-    }
-    else
-    {
-      $create_automatically = !sfConfig::get('app_facebook_redirect_after_connect', false);
-      $sfGuardUser = sfFacebook::getSfGuardUserByFacebookSession($create_automatically);
-    }
+			//If not force to login, only show the facebook connect view
+			$facebook = sfFacebook::getFacebookClient();
+					
+			$this->facebookConnectUrl = $facebook->getLoginUrl(array(
+					'scope' => 'email, publish_actions'
+			));
+							
+			return sfView::SUCCESS;
+		}
+		// the user exists in unactivated mode
+		else
+		{
+			$this->getUser()->setFlash('error', 'Your account is not activated');
+			$redirect_url = sfConfig::get('sf_login_module').'/'.sfConfig::get('sf_login_action');
+		}
 
-    if ($sfGuardUser)
-    {
-      $this->getContext()->getUser()->signIn($sfGuardUser);
-
-      $referer = $user->getAttribute('referer', $this->getRequest()->getReferer());
-      $user->getAttributeHolder()->remove('referer');
-
-      $signin_url = sfConfig::get('app_sf_guard_plugin_success_signin_url', $referer);
-
-      $forward = $request->getParameter('forward');
-
-      $signin_url = $forward != '' ? $forward : $signin_url;
-
-      $this->redirect('' != $signin_url ? $signin_url : '@homepage');
-    }
-    // check if user forgot to activate the account
-    $sfGuardUser = sfFacebook::getSfGuardUserByFacebookSession($create_automatically, false);
-
-    // the user does not exist even in unactivated mode
-    if (!$sfGuardUser)
-    {
-      if ($this->getRequest()->isXmlHttpRequest())
-      {
-        $this->getResponse()->setHeaderOnly(true);
-        $this->getResponse()->setStatusCode(401);
-
-        return sfView::NONE;
-      }
-
-      if (!$user->hasAttribute('referer'))
-      {
-          if($request->getParameter('forward', false))
-          {
-              $user->setAttribute('referer', $request->getParameter('forward'));
-          }else
-          {
-            $user->setAttribute('referer', $this->getRequest()->getUri());
-          }
-      }
-
-      //$redirect_url = sfConfig::get('app_facebook_redirect_after_connect_url');
-      return sfView::SUCCESS;
-    }
-    // the user exists in unactivated mode
-    else
-    {
-      $this->getUser()->setFlash('error', 'Your account is not activated');
-      $redirect_url = sfConfig::get('sf_login_module').'/'.sfConfig::get('sf_login_action');
-    }
-
-    return $this->redirect($redirect_url);
-
+		return $this->redirect($redirect_url);
   }
   
 

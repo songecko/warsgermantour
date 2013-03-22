@@ -2,9 +2,15 @@
 
 class myUser extends sfGuardSecurityUser
 {
+	public function isAuthenticated()
+	{
+		$fbUser = sfFacebook::getUser();
+		return (parent::isAuthenticated() && $fbUser);
+	}
+	
 	public function hasProfile()
 	{
-		return ($this->getGuardUser() && $this->getGuardUser()->Profile && $this->getGuardUser()->Profile->getDni());
+		return ($this->getGuardUser() && $this->getGuardUser()->Profile && $this->getGuardUser()->Profile->getEmailAddress());
 	}
 	
 	public function hasTwitter()

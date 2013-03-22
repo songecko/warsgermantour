@@ -95,10 +95,7 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
 		$user = $this->getUser();
 		if($user->hasProfile())
 		{
-			if($user->hasTwitter())
-				$this->redirect($this->generateUrl('tweet'));
-			else 
-				$this->redirect($this->generateUrl('ranking'));
+				$this->redirect($this->generateUrl('homepage'));
 		}
 		
 		if($user->isAuthenticated())
