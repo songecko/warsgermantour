@@ -19,6 +19,10 @@ class RegisterForm extends sfGuardUserProfileForm
 		{
 			$this->useFields($useFields);
 		}
+		
+		$this->setValidator('first_name', new sfValidatorString(array('max_length' => 50, 'required' => true)));
+		
+		$this->setValidator('last_name', new sfValidatorString(array('max_length' => 50, 'required' => true)));
 				
 		//$this->setWidget('dni', new sfWidgetFormInputText(array(), array('maxlength' => 8)));
 		/*$this->setValidator('dni', new sfValidatorNumber(array(
@@ -27,7 +31,7 @@ class RegisterForm extends sfGuardUserProfileForm
 		)));*/
 		
 		$this->setWidget('phone_number', new sfWidgetFormPhoneNumber());
-		$this->setValidator('phone_number', new sfValidatorPhoneNumber(array('required' => true)));
+		$this->setValidator('phone_number', new sfValidatorPhoneNumber());
 
 		/*$this->setWidget('birth_date', new sfWidgetFormBirthDate(array(
 			'format' => '%day% %month% %year%'

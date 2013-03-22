@@ -52,6 +52,7 @@ class homeActions extends sfActions
 		$this->redirectUnless($this->getUser()->hasProfile(), 'create_profile');
 		
 		//START THE HOMEPAGE ACTION		
+		
 		if ($isMobile)
 		{
 			$this->setLayout('mobile_layout');
@@ -75,7 +76,9 @@ class homeActions extends sfActions
 	public function executeSendPromoCode(sfWebRequest $request)
 	{
 		$this->user = $this->getUser()->getGuardUser();
-		$this->promoCodeForm = new PromoCodeForm();
+		$this->user->Profile->moveToFirst();
+		die;
+		/*$this->promoCodeForm = new PromoCodeForm();
 		
 		if($request->isMethod('post'))
 		{
@@ -121,7 +124,7 @@ class homeActions extends sfActions
 			{
 				$this->getUser()->setFlash('error', 'El c&oacute;digo ingresado no es v&aacute;lido.');
 			}		
-		}
+		}*/
 		
 		$this->redirect($this->generateUrl('homepage'));
 	}

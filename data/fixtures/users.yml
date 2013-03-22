@@ -1,0 +1,7 @@
+sfGuardUser:
+<?php for($i = 1; $i <= 30; $i++): ?>
+  user_<?php echo $i ?>:
+    username: "user<?php echo $i; ?>"
+    Profile:
+      position: "<?php echo $i; ?>"
+<?php endfor; ?>

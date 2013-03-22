@@ -1,4 +1,5 @@
 sfGuardUserProfile:
+  actAs:              [Sortable]
   tableName:          sf_guard_user_profile
   columns:
     user_id:          { type: integer, notnull: true }

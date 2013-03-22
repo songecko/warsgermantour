@@ -25,6 +25,7 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
       'phone_number'     => new sfWidgetFormFilterInput(),
       'birth_date'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'points'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'position'         => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -40,6 +41,7 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
       'phone_number'     => new sfValidatorPass(array('required' => false)),
       'birth_date'       => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'points'           => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'position'         => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('sf_guard_user_profile_filters[%s]');
@@ -72,6 +74,7 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
       'phone_number'     => 'Text',
       'birth_date'       => 'Date',
       'points'           => 'Number',
+      'position'         => 'Number',
     );
   }
 }

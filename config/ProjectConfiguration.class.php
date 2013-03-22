@@ -13,7 +13,8 @@ class ProjectConfiguration extends sfProjectConfiguration
 			'sfAdminDashPlugin',
 			'sfCsvPlugin',
     		'sfPhirehosePlugin',
-			'sfFacebookConnectPlugin'
+			'sfFacebookConnectPlugin',
+			'csDoctrineActAsSortablePlugin'
 		));
 	}
 }

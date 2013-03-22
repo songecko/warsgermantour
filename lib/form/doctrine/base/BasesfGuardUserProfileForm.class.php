@@ -28,6 +28,7 @@ abstract class BasesfGuardUserProfileForm extends BaseFormDoctrine
       'phone_number'     => new sfWidgetFormInputText(),
       'birth_date'       => new sfWidgetFormDateTime(),
       'points'           => new sfWidgetFormInputText(),
+      'position'         => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -44,7 +45,12 @@ abstract class BasesfGuardUserProfileForm extends BaseFormDoctrine
       'phone_number'     => new sfValidatorString(array('max_length' => 12, 'required' => false)),
       'birth_date'       => new sfValidatorDateTime(array('required' => false)),
       'points'           => new sfValidatorInteger(array('required' => false)),
+      'position'         => new sfValidatorInteger(array('required' => false)),
     ));
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'sfGuardUserProfile', 'column' => array('position')))
+    );
 
     $this->widgetSchema->setNameFormat('sf_guard_user_profile[%s]');
 

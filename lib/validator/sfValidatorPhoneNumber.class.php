@@ -2,6 +2,11 @@
 
 class sfValidatorPhoneNumber extends sfValidatorString
 {
+	public function clean($value)
+	{
+		return parent::clean($this->doClean($value));
+	}
+	
 	protected function doClean($value)
 	{
 		if(is_array($value))

@@ -123,5 +123,9 @@ abstract class BasesfGuardUserProfile extends sfDoctrineRecord
              'local' => 'user_id',
              'foreign' => 'id',
              'onDelete' => 'cascade'));
+
+        $sortable0 = new Doctrine_Template_Sortable(array(
+             ));
+        $this->actAs($sortable0);
     }
 }

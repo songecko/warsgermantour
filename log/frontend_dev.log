@@ -1438,3 +1438,1288 @@ Mar 22 08:33:23 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProf
 Mar 22 08:33:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
 Mar 22 08:33:23 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 43.22 ms (1)
 Mar 22 08:33:23 symfony [info] {sfWebResponse} Send content (52069 o)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 17:23:57 symfony [info] {myUser} Automatic user logout due to timeout
+Mar 22 17:23:57 symfony [info] {myUser} User is not authenticated
+Mar 22 17:23:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:23:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:23:57 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 17:23:57 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 17:23:57 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/facebook/signin?forward=https%3A%2F%2Fdev.germanmastertour.com%2Ffrontend_dev.php"
+Mar 22 17:23:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 17:23:57 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/facebook/signin?forward=https%3A%2F%2Fdev.germanmastertour.com%2Ffrontend_dev.php"
+Mar 22 17:23:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 17:23:57 symfony [info] {sfWebDebugLogger} Configuration 1087.88 ms (8)
+Mar 22 17:23:57 symfony [info] {sfWebDebugLogger} Factories 497.59 ms (1)
+Mar 22 17:23:57 symfony [info] {sfWebDebugLogger} Action "home/index" 39.59 ms (1)
+Mar 22 17:23:57 symfony [info] {sfWebResponse} Send content (202 o)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:23:57 symfony [info] {sfPatternRouting} Match route "facebook_signin" (/facebook/signin) for /facebook/signin with parameters array (  'module' => 'sfFacebookConnectAuth',  'action' => 'signin',)
+Mar 22 17:23:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:23:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:23:57 symfony [info] {sfFacebookConnectAuthActions} Call "sfFacebookConnectAuthActions->executeSignin()"
+Mar 22 17:23:57 symfony [info] {sfFacebookConnect} Fb_uid from cookie : 0
+Mar 22 17:23:57 symfony [info] {sfFacebookConnect} No current Facebook session
+Mar 22 17:23:57 symfony [info] {sfFacebookConnect} Fb_uid from cookie : 0
+Mar 22 17:23:57 symfony [info] {sfFacebookConnect} No current Facebook session
+Mar 22 17:23:57 symfony [info] {sfPHPView} Render "D:/www/projects/warsgermantour/plugins/sfFacebookConnectPlugin/modules/sfFacebookConnectAuth/templates/signinSuccess.php"
+Mar 22 17:23:57 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:23:57 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:23:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:23:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:23:57 symfony [info] {sfWebDebugLogger} Configuration 67.36 ms (10)
+Mar 22 17:23:57 symfony [info] {sfWebDebugLogger} Factories 54.56 ms (1)
+Mar 22 17:23:57 symfony [info] {sfWebDebugLogger} Action "sfFacebookConnectAuth/signin" 0.49 ms (1)
+Mar 22 17:23:57 symfony [info] {sfWebDebugLogger} View "Success" for "sfFacebookConnectAuth/signin" 70.72 ms (1)
+Mar 22 17:23:57 symfony [info] {sfWebResponse} Send content (38959 o)
+Mar 22 17:30:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:30:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:30:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:30:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:30:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:30:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:30:27 symfony [info] {sfPatternRouting} Match route "facebook_signin" (/facebook/signin) for /facebook/signin with parameters array (  'module' => 'sfFacebookConnectAuth',  'action' => 'signin',)
+Mar 22 17:30:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:30:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:30:30 symfony [info] {sfFacebookConnectAuthActions} Call "sfFacebookConnectAuthActions->executeSignin()"
+Mar 22 17:30:30 symfony [info] {sfFacebookConnect} Fb_uid from cookie : 1409787838
+Mar 22 17:30:31 symfony [err] {Doctrine_Connection_Exception} PDO Connection Error: SQLSTATE[42000] [1049] Unknown database 'warsgermantour'
+Mar 22 17:30:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Mar 22 17:30:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 17:30:31 symfony [info] {sfWebDebugLogger} Configuration 290.27 ms (10)
+Mar 22 17:30:31 symfony [info] {sfWebDebugLogger} Factories 3360.11 ms (1)
+Mar 22 17:30:31 symfony [info] {sfWebDebugLogger} Action "sfFacebookConnectAuth/signin" 779.26 ms (1)
+Mar 22 17:43:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:43:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:43:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:43:16 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:43:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:43:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:43:16 symfony [info] {sfPatternRouting} Match route "facebook_signin" (/facebook/signin) for /facebook/signin with parameters array (  'module' => 'sfFacebookConnectAuth',  'action' => 'signin',)
+Mar 22 17:43:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:43:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:43:16 symfony [info] {sfFacebookConnectAuthActions} Call "sfFacebookConnectAuthActions->executeSignin()"
+Mar 22 17:43:16 symfony [info] {sfFacebookConnect} Fb_uid from cookie : 1409787838
+Mar 22 17:43:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:43:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM (SELECT s.id FROM sf_guard_user s INNER JOIN sf_guard_user_profile s2 ON s.id = s2.user_id WHERE s2.facebook_uid = ? AND s.is_active = ? GROUP BY s.id) dctrn_count_query - (1409787838, 1)
+Mar 22 17:43:17 symfony [info] {sfFacebookConnect} No user exists with current facebook_uid
+Mar 22 17:43:18 symfony [info] {sfFacebookConnect} No user exists with current email hash
+Mar 22 17:43:18 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user (algorithm, is_active, is_super_admin, username, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (sha1, 1, 0, Facebook_1409787838, 2013-03-22 17:43:18, 2013-03-22 17:43:18)
+Mar 22 17:43:18 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user_profile (points, user_id, facebook_uid) VALUES (?, ?, ?) - (0, 1, 1409787838)
+Mar 22 17:43:18 symfony [info] {myUser} User is authenticated
+Mar 22 17:43:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (1)
+Mar 22 17:43:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (1)
+Mar 22 17:43:18 symfony [info] {myUser} Add credential(s) ""
+Mar 22 17:43:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:43:18 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ? WHERE id = ? - (2013-03-22 17:43:18, 1)
+Mar 22 17:43:18 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php"
+Mar 22 17:43:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 17:43:18 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php"
+Mar 22 17:43:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 17:43:18 symfony [info] {sfWebDebugLogger} Configuration 580.16 ms (9)
+Mar 22 17:43:18 symfony [info] {sfWebDebugLogger} Factories 114.22 ms (1)
+Mar 22 17:43:18 symfony [info] {sfWebDebugLogger} Action "sfFacebookConnectAuth/signin" 2087.71 ms (1)
+Mar 22 17:43:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (8)
+Mar 22 17:43:18 symfony [info] {sfWebResponse} Send content (120 o)
+Mar 22 17:43:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:43:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:43:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:43:18 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:43:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:43:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:43:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 17:43:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:43:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:43:18 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 17:43:18 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 17:43:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:43:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:43:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:43:19 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/create-profile"
+Mar 22 17:43:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 17:43:19 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/create-profile"
+Mar 22 17:43:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} Configuration 46.93 ms (9)
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} Factories 59.07 ms (1)
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} Action "home/index" 60.69 ms (1)
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 17:43:19 symfony [info] {sfWebResponse} Send content (135 o)
+Mar 22 17:43:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:43:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:43:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:43:19 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:43:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:43:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:43:19 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:43:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:43:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:43:19 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:43:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:43:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:43:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:43:19 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:43:19 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:43:19 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:43:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:43:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} Configuration 63.18 ms (10)
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} Factories 77.60 ms (1)
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 238.49 ms (1)
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 17:43:19 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 55.31 ms (1)
+Mar 22 17:43:19 symfony [info] {sfWebResponse} Send content (48096 o)
+Mar 22 17:43:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:43:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:43:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:43:47 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:43:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:43:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:43:47 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:43:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:43:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:43:47 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:43:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:43:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:43:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:43:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 17:43:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 17:43:48 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:43:48 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:43:48 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:43:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:43:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:43:48 symfony [info] {sfWebDebugLogger} Configuration 16.25 ms (9)
+Mar 22 17:43:48 symfony [info] {sfWebDebugLogger} Factories 55.68 ms (1)
+Mar 22 17:43:48 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 108.78 ms (1)
+Mar 22 17:43:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (5)
+Mar 22 17:43:48 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 21.76 ms (1)
+Mar 22 17:43:48 symfony [info] {sfWebResponse} Send content (52715 o)
+Mar 22 17:45:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:45:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:45:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:45:45 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:45:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:45:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:45:45 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:45:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:45:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:45:45 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:45:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:45:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:45:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:45:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:45:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:45:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:45:54 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:45:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:45:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:45:54 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:45:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:45:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:45:54 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:45:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:45:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:45:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:45:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 17:45:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 17:45:54 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:45:54 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:45:54 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:45:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:45:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:45:54 symfony [info] {sfWebDebugLogger} Configuration 15.00 ms (9)
+Mar 22 17:45:54 symfony [info] {sfWebDebugLogger} Factories 55.98 ms (1)
+Mar 22 17:45:54 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 96.65 ms (1)
+Mar 22 17:45:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (5)
+Mar 22 17:45:54 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 25.73 ms (1)
+Mar 22 17:45:54 symfony [info] {sfWebResponse} Send content (52714 o)
+Mar 22 17:47:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:47:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:47:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:47:31 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:47:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:47:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:47:31 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:47:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:47:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:47:31 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:47:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 17:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 17:47:32 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:47:32 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:47:32 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:47:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:47:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:47:32 symfony [info] {sfWebDebugLogger} Configuration 11.72 ms (9)
+Mar 22 17:47:32 symfony [info] {sfWebDebugLogger} Factories 52.14 ms (1)
+Mar 22 17:47:32 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 90.14 ms (1)
+Mar 22 17:47:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Mar 22 17:47:32 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 22.69 ms (1)
+Mar 22 17:47:32 symfony [info] {sfWebResponse} Send content (52838 o)
+Mar 22 17:48:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:48:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:48:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:48:15 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:48:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:48:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:48:15 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:48:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:48:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:48:15 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:48:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:48:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:48:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:48:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 17:48:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 17:48:15 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:48:15 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:48:15 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:48:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:48:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:48:15 symfony [info] {sfWebDebugLogger} Configuration 12.88 ms (9)
+Mar 22 17:48:15 symfony [info] {sfWebDebugLogger} Factories 53.72 ms (1)
+Mar 22 17:48:15 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 104.12 ms (1)
+Mar 22 17:48:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (5)
+Mar 22 17:48:15 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 20.79 ms (1)
+Mar 22 17:48:15 symfony [info] {sfWebResponse} Send content (52839 o)
+Mar 22 17:49:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:49:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:49:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:49:53 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:49:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:49:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:49:53 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:49:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:49:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:49:53 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:49:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:49:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:49:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:49:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 17:49:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 17:49:53 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:49:53 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:49:53 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:49:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:49:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:49:53 symfony [info] {sfWebDebugLogger} Configuration 14.12 ms (9)
+Mar 22 17:49:53 symfony [info] {sfWebDebugLogger} Factories 57.31 ms (1)
+Mar 22 17:49:53 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 93.07 ms (1)
+Mar 22 17:49:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Mar 22 17:49:53 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 20.45 ms (1)
+Mar 22 17:49:53 symfony [info] {sfWebResponse} Send content (52755 o)
+Mar 22 17:53:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:53:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:53:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:53:15 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:53:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:53:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:53:15 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:53:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:53:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:53:16 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:53:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:53:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:53:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:53:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 17:53:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 17:53:16 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:53:16 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:53:16 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:53:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:53:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:53:16 symfony [info] {sfWebDebugLogger} Configuration 12.12 ms (9)
+Mar 22 17:53:16 symfony [info] {sfWebDebugLogger} Factories 52.92 ms (1)
+Mar 22 17:53:16 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 100.22 ms (1)
+Mar 22 17:53:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (5)
+Mar 22 17:53:16 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 22.04 ms (1)
+Mar 22 17:53:16 symfony [info] {sfWebResponse} Send content (52815 o)
+Mar 22 17:53:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:53:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:53:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:53:47 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:53:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:53:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:53:47 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:53:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:53:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:53:47 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:53:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:53:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:53:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:53:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 17:53:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 17:53:47 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:53:47 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:53:47 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:53:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:53:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:53:47 symfony [info] {sfWebDebugLogger} Configuration 9.49 ms (9)
+Mar 22 17:53:47 symfony [info] {sfWebDebugLogger} Factories 46.02 ms (1)
+Mar 22 17:53:47 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 99.65 ms (1)
+Mar 22 17:53:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Mar 22 17:53:47 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 22.06 ms (1)
+Mar 22 17:53:47 symfony [info] {sfWebResponse} Send content (52765 o)
+Mar 22 17:53:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 17:53:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 17:53:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 17:53:53 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 17:53:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 17:53:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 17:53:53 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 17:53:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 17:53:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 17:53:53 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 17:53:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 17:53:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 17:53:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 17:53:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 17:53:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 17:53:53 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 17:53:53 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:53:53 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 17:53:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 17:53:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 17:53:53 symfony [info] {sfWebDebugLogger} Configuration 12.03 ms (9)
+Mar 22 17:53:53 symfony [info] {sfWebDebugLogger} Factories 54.12 ms (1)
+Mar 22 17:53:53 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 90.21 ms (1)
+Mar 22 17:53:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (5)
+Mar 22 17:53:53 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 20.09 ms (1)
+Mar 22 17:53:53 symfony [info] {sfWebResponse} Send content (52766 o)
+Mar 22 18:46:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:46:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:46:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:46:20 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:46:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:46:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:46:20 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:46:20 symfony [info] {myUser} Automatic user logout due to timeout
+Mar 22 18:46:20 symfony [info] {myUser} User is not authenticated
+Mar 22 18:46:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:46:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:46:20 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:46:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:46:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:46:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:46:29 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:46:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:46:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:46:29 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:46:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:46:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:46:29 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:46:30 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 18:46:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 18:46:30 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 18:46:30 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:46:30 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:46:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 18:46:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 18:46:30 symfony [info] {sfWebDebugLogger} Configuration 12.09 ms (9)
+Mar 22 18:46:30 symfony [info] {sfWebDebugLogger} Factories 50.08 ms (1)
+Mar 22 18:46:30 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 87.74 ms (1)
+Mar 22 18:46:30 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 22 18:46:30 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 23.62 ms (1)
+Mar 22 18:46:30 symfony [info] {sfWebResponse} Send content (46172 o)
+Mar 22 18:46:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:46:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:46:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:46:38 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:46:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:46:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:46:38 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:46:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:46:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:46:38 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:46:39 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 18:46:39 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:46:39 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:46:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 18:46:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 18:46:39 symfony [info] {sfWebDebugLogger} Configuration 13.31 ms (9)
+Mar 22 18:46:39 symfony [info] {sfWebDebugLogger} Factories 52.25 ms (1)
+Mar 22 18:46:39 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 48.48 ms (1)
+Mar 22 18:46:39 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 22.31 ms (1)
+Mar 22 18:46:39 symfony [info] {sfWebResponse} Send content (40514 o)
+Mar 22 18:46:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:46:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:46:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:46:41 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:46:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:46:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:46:41 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:46:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:46:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:46:41 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:46:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 18:46:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 18:46:41 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 18:46:41 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:46:41 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:46:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 18:46:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 18:46:41 symfony [info] {sfWebDebugLogger} Configuration 12.95 ms (9)
+Mar 22 18:46:41 symfony [info] {sfWebDebugLogger} Factories 50.21 ms (1)
+Mar 22 18:46:41 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 82.43 ms (1)
+Mar 22 18:46:41 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 22 18:46:41 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 20.71 ms (1)
+Mar 22 18:46:41 symfony [info] {sfWebResponse} Send content (45783 o)
+Mar 22 18:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:48:33 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:48:33 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:48:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:48:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:48:33 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:48:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:48:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:48:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:48:44 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:48:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:48:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:48:44 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:48:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:48:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:48:44 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:49:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:49:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:49:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:49:16 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:49:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:49:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:49:16 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:49:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:49:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:49:16 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:49:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:49:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:49:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:49:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:49:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:49:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:49:35 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:49:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:49:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:49:35 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:49:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:49:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:49:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:49:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:49:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:49:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:49:43 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:49:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:49:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:49:43 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:50:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:50:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:50:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:50:37 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:50:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:50:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:50:37 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:50:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:50:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:50:37 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:50:37 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\lib\validator\sfValidatorPhoneNumber.class.php on line 7 (Undefined variable: clean)
+Mar 22 18:50:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 18:50:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 18:50:38 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 18:50:38 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:50:38 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:50:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 18:50:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 18:50:38 symfony [info] {sfWebDebugLogger} Configuration 12.68 ms (9)
+Mar 22 18:50:38 symfony [info] {sfWebDebugLogger} Factories 53.19 ms (1)
+Mar 22 18:50:38 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 87.96 ms (1)
+Mar 22 18:50:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 22 18:50:38 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 18.63 ms (1)
+Mar 22 18:50:38 symfony [info] {sfWebResponse} Send content (45845 o)
+Mar 22 18:51:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:51:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:51:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:51:06 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:51:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:51:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:51:06 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:51:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:51:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:51:06 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:51:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 18:51:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 18:51:06 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 18:51:06 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:51:06 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:51:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 18:51:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 18:51:06 symfony [info] {sfWebDebugLogger} Configuration 13.48 ms (9)
+Mar 22 18:51:06 symfony [info] {sfWebDebugLogger} Factories 54.09 ms (1)
+Mar 22 18:51:06 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 86.81 ms (1)
+Mar 22 18:51:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 22 18:51:06 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 20.77 ms (1)
+Mar 22 18:51:06 symfony [info] {sfWebResponse} Send content (45845 o)
+Mar 22 18:51:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:51:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:51:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:51:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:51:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:51:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:51:17 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:51:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:51:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:51:17 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:51:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 18:51:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 18:51:17 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 18:51:17 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:51:17 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:51:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 18:51:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 18:51:17 symfony [info] {sfWebDebugLogger} Configuration 12.58 ms (9)
+Mar 22 18:51:17 symfony [info] {sfWebDebugLogger} Factories 51.23 ms (1)
+Mar 22 18:51:17 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 87.83 ms (1)
+Mar 22 18:51:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 22 18:51:17 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 18.19 ms (1)
+Mar 22 18:51:17 symfony [info] {sfWebResponse} Send content (45807 o)
+Mar 22 18:51:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:51:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:51:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:51:25 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:51:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:51:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:51:25 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:51:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:51:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:51:25 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:51:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 18:51:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 18:51:25 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 18:51:25 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:51:25 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:51:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 18:51:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 18:51:25 symfony [info] {sfWebDebugLogger} Configuration 12.74 ms (9)
+Mar 22 18:51:25 symfony [info] {sfWebDebugLogger} Factories 52.20 ms (1)
+Mar 22 18:51:25 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 79.48 ms (1)
+Mar 22 18:51:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 22 18:51:25 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 17.77 ms (1)
+Mar 22 18:51:25 symfony [info] {sfWebResponse} Send content (45712 o)
+Mar 22 18:51:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 18:51:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 18:51:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 18:51:44 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 18:51:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 18:51:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 18:51:44 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 18:51:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 18:51:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 18:51:44 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 18:51:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 18:51:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 18:51:44 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 18:51:44 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:51:44 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 18:51:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 18:51:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 18:51:44 symfony [info] {sfWebDebugLogger} Configuration 12.49 ms (9)
+Mar 22 18:51:44 symfony [info] {sfWebDebugLogger} Factories 50.67 ms (1)
+Mar 22 18:51:44 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 78.79 ms (1)
+Mar 22 18:51:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 22 18:51:44 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 18.01 ms (1)
+Mar 22 18:51:44 symfony [info] {sfWebResponse} Send content (45795 o)
+Mar 22 19:00:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 19:00:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 19:00:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 19:00:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 19:00:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 19:00:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 19:00:32 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 19:00:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 19:00:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 19:00:32 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 19:00:32 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 19:00:32 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 19:00:32 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 19:00:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 19:00:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 19:00:32 symfony [info] {sfWebDebugLogger} Configuration 12.74 ms (9)
+Mar 22 19:00:32 symfony [info] {sfWebDebugLogger} Factories 54.85 ms (1)
+Mar 22 19:00:32 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 61.06 ms (1)
+Mar 22 19:00:32 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 22.14 ms (1)
+Mar 22 19:00:32 symfony [info] {sfWebResponse} Send content (40514 o)
+Mar 22 19:26:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 19:26:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 19:26:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 19:26:24 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 19:26:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 19:26:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 19:26:24 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 19:26:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 19:26:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 19:26:24 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 19:26:24 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 19:26:24 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 19:26:24 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 19:26:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 19:26:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 19:26:24 symfony [info] {sfWebDebugLogger} Configuration 12.43 ms (9)
+Mar 22 19:26:24 symfony [info] {sfWebDebugLogger} Factories 84.19 ms (1)
+Mar 22 19:26:24 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 86.89 ms (1)
+Mar 22 19:26:24 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 29.03 ms (1)
+Mar 22 19:26:24 symfony [info] {sfWebResponse} Send content (39769 o)
+Mar 22 20:50:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 20:50:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 20:50:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 20:50:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 20:50:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 20:50:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 20:50:48 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 20:50:48 symfony [info] {myUser} Automatic user logout due to timeout
+Mar 22 20:50:48 symfony [info] {myUser} User is not authenticated
+Mar 22 20:50:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 20:50:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 20:50:48 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 20:50:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 20:50:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 20:50:48 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 20:50:48 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 20:50:48 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 20:50:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 20:50:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 20:50:48 symfony [info] {sfWebDebugLogger} Configuration 13.92 ms (9)
+Mar 22 20:50:48 symfony [info] {sfWebDebugLogger} Factories 107.13 ms (1)
+Mar 22 20:50:48 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 163.85 ms (1)
+Mar 22 20:50:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 22 20:50:48 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 39.04 ms (1)
+Mar 22 20:50:48 symfony [info] {sfWebResponse} Send content (45958 o)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 21:10:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:10:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:10:11 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 21:10:11 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/"
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/"
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Configuration 15.08 ms (8)
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Factories 67.49 ms (1)
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 0.69 ms (1)
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send content (121 o)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:10:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:10:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:10:11 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:10:11 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:10:11 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/facebook/signin?forward=https%3A%2F%2Fdev.germanmastertour.com%2Ffrontend_dev.php%2F"
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/facebook/signin?forward=https%3A%2F%2Fdev.germanmastertour.com%2Ffrontend_dev.php%2F"
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Configuration 11.09 ms (8)
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Factories 50.59 ms (1)
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Action "home/index" 1.39 ms (1)
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send content (205 o)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:10:11 symfony [info] {sfPatternRouting} Match route "facebook_signin" (/facebook/signin) for /facebook/signin with parameters array (  'module' => 'sfFacebookConnectAuth',  'action' => 'signin',)
+Mar 22 21:10:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:10:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:10:11 symfony [info] {sfFacebookConnectAuthActions} Call "sfFacebookConnectAuthActions->executeSignin()"
+Mar 22 21:10:11 symfony [info] {sfFacebookConnect} Fb_uid from cookie : 0
+Mar 22 21:10:11 symfony [info] {sfFacebookConnect} No current Facebook session
+Mar 22 21:10:11 symfony [info] {sfFacebookConnect} Fb_uid from cookie : 0
+Mar 22 21:10:11 symfony [info] {sfFacebookConnect} No current Facebook session
+Mar 22 21:10:11 symfony [info] {sfPHPView} Render "D:/www/projects/warsgermantour/plugins/sfFacebookConnectPlugin/modules/sfFacebookConnectAuth/templates/signinSuccess.php"
+Mar 22 21:10:11 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:10:11 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Configuration 47.72 ms (10)
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Factories 48.30 ms (1)
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} Action "sfFacebookConnectAuth/signin" 0.50 ms (1)
+Mar 22 21:10:11 symfony [info] {sfWebDebugLogger} View "Success" for "sfFacebookConnectAuth/signin" 59.48 ms (1)
+Mar 22 21:10:11 symfony [info] {sfWebResponse} Send content (38652 o)
+Mar 22 21:10:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:10:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:10:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:10:13 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:10:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:10:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:10:13 symfony [info] {sfPatternRouting} Match route "facebook_signin" (/facebook/signin) for /facebook/signin with parameters array (  'module' => 'sfFacebookConnectAuth',  'action' => 'signin',)
+Mar 22 21:10:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:10:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:10:16 symfony [info] {sfFacebookConnectAuthActions} Call "sfFacebookConnectAuthActions->executeSignin()"
+Mar 22 21:10:16 symfony [info] {sfFacebookConnect} Fb_uid from cookie : 1409787838
+Mar 22 21:10:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:10:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM (SELECT s.id FROM sf_guard_user s INNER JOIN sf_guard_user_profile s2 ON s.id = s2.user_id WHERE s2.facebook_uid = ? AND s.is_active = ? GROUP BY s.id) dctrn_count_query - (1409787838, 1)
+Mar 22 21:10:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.id AS s2__id, s2.user_id AS s2__user_id, s2.facebook_uid AS s2__facebook_uid, s2.twitter_username AS s2__twitter_username, s2.first_name AS s2__first_name, s2.last_name AS s2__last_name, s2.email_address AS s2__email_address, s2.email_hash AS s2__email_hash, s2.profile_image AS s2__profile_image, s2.dni AS s2__dni, s2.phone_number AS s2__phone_number, s2.birth_date AS s2__birth_date, s2.points AS s2__points FROM sf_guard_user s INNER JOIN sf_guard_user_profile s2 ON s.id = s2.user_id WHERE (s2.facebook_uid = ? AND s.is_active = ?) - (1409787838, 1)
+Mar 22 21:10:16 symfony [info] {myUser} User is authenticated
+Mar 22 21:10:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (1)
+Mar 22 21:10:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (1)
+Mar 22 21:10:16 symfony [info] {myUser} Add credential(s) ""
+Mar 22 21:10:16 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2013-03-22 21:10:16, 2013-03-22 21:10:16, 1)
+Mar 22 21:10:17 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/"
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/"
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Configuration 386.40 ms (10)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Factories 2982.27 ms (1)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Action "sfFacebookConnectAuth/signin" 509.82 ms (1)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (6)
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send content (121 o)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:10:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:10:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:10:17 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:10:17 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:10:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:10:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 21:10:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 21:10:17 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/create-profile"
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/create-profile"
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Configuration 14.04 ms (8)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Factories 52.66 ms (1)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Action "home/index" 62.32 ms (1)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send content (135 o)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:10:17 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 21:10:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:10:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:10:17 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 21:10:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:10:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 21:10:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 21:10:17 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 21:10:17 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:10:17 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Configuration 16.93 ms (9)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Factories 51.54 ms (1)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 78.88 ms (1)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:10:17 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 23.92 ms (1)
+Mar 22 21:10:17 symfony [info] {sfWebResponse} Send content (47992 o)
+Mar 22 21:11:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:11:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:11:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:11:02 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:11:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:11:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:11:02 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 21:11:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:11:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:11:02 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 21:11:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:11:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 21:11:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 21:11:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 21:11:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - ()
+Mar 22 21:11:02 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 21:11:02 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:11:02 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:11:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:11:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:11:02 symfony [info] {sfWebDebugLogger} Configuration 16.81 ms (9)
+Mar 22 21:11:02 symfony [info] {sfWebDebugLogger} Factories 52.27 ms (1)
+Mar 22 21:11:02 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 83.27 ms (1)
+Mar 22 21:11:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Mar 22 21:11:02 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 22.35 ms (1)
+Mar 22 21:11:02 symfony [info] {sfWebResponse} Send content (52828 o)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 21:11:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:11:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:11:22 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 21:11:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:11:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 21:11:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 21:11:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (1)
+Mar 22 21:11:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.email_address = ?) - (songecko@gmail.com)
+Mar 22 21:11:22 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user_profile SET first_name = ?, last_name = ?, email_address = ?, phone_number = ? WHERE id = ? - (Diego, D'amico, songecko@gmail.com, 011-42206768, 1)
+Mar 22 21:11:22 symfony [info] {sfFrontWebController} Redirect to "/frontend_dev.php/"
+Mar 22 21:11:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:11:22 symfony [info] {sfWebResponse} Send header "Location: /frontend_dev.php/"
+Mar 22 21:11:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:11:22 symfony [info] {sfWebDebugLogger} Configuration 15.06 ms (8)
+Mar 22 21:11:22 symfony [info] {sfWebDebugLogger} Factories 52.33 ms (1)
+Mar 22 21:11:22 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 118.53 ms (1)
+Mar 22 21:11:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (6)
+Mar 22 21:11:22 symfony [info] {sfWebResponse} Send content (89 o)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:11:22 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:11:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:11:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:11:22 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:11:22 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:11:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:11:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 21:11:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 21:11:23 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 21:11:23 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:11:23 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:11:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:11:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:11:23 symfony [info] {sfWebDebugLogger} Configuration 35.80 ms (10)
+Mar 22 21:11:23 symfony [info] {sfWebDebugLogger} Factories 52.15 ms (1)
+Mar 22 21:11:23 symfony [info] {sfWebDebugLogger} Action "home/index" 61.00 ms (1)
+Mar 22 21:11:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:11:23 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 55.96 ms (1)
+Mar 22 21:11:23 symfony [info] {sfWebResponse} Send content (43992 o)
+Mar 22 21:11:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:11:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:11:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:11:29 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:11:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:11:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:11:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:11:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:11:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:11:29 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:11:29 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:11:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:11:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 21:11:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 21:11:29 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 21:11:29 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:11:29 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:11:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:11:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:11:29 symfony [info] {sfWebDebugLogger} Configuration 11.03 ms (9)
+Mar 22 21:11:29 symfony [info] {sfWebDebugLogger} Factories 50.70 ms (1)
+Mar 22 21:11:29 symfony [info] {sfWebDebugLogger} Action "home/index" 66.36 ms (1)
+Mar 22 21:11:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:11:29 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 16.21 ms (1)
+Mar 22 21:11:29 symfony [info] {sfWebResponse} Send content (43896 o)
+Mar 22 21:15:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:15:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:15:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:15:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:15:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:15:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:15:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:15:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:15:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:15:35 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:15:35 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:15:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:15:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 21:15:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 21:15:35 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 21:15:35 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:15:35 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:15:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:15:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:15:35 symfony [info] {sfWebDebugLogger} Configuration 11.21 ms (9)
+Mar 22 21:15:35 symfony [info] {sfWebDebugLogger} Factories 52.87 ms (1)
+Mar 22 21:15:35 symfony [info] {sfWebDebugLogger} Action "home/index" 68.37 ms (1)
+Mar 22 21:15:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:15:35 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 17.63 ms (1)
+Mar 22 21:15:35 symfony [info] {sfWebResponse} Send content (43896 o)
+Mar 22 21:16:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:16:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:16:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:16:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:16:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:16:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:16:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:16:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:16:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:16:59 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:17:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:17:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:17:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:17:41 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:17:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:17:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:17:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:17:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:17:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:17:41 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:17:41 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:17:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:17:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Mar 22 21:17:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (1)
+Mar 22 21:17:41 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 21:17:41 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:17:41 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:17:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:17:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:17:41 symfony [info] {sfWebDebugLogger} Configuration 10.41 ms (9)
+Mar 22 21:17:41 symfony [info] {sfWebDebugLogger} Factories 48.84 ms (1)
+Mar 22 21:17:41 symfony [info] {sfWebDebugLogger} Action "home/index" 66.47 ms (1)
+Mar 22 21:17:41 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:17:41 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 16.18 ms (1)
+Mar 22 21:17:41 symfony [info] {sfWebResponse} Send content (43896 o)
+Mar 22 21:57:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:57:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:57:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:57:01 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:57:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:57:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:57:01 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:57:01 symfony [info] {myUser} Automatic user logout due to timeout
+Mar 22 21:57:01 symfony [info] {myUser} User is not authenticated
+Mar 22 21:57:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:57:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:57:02 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:57:02 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:57:02 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/facebook/signin?forward=https%3A%2F%2Fdev.germanmastertour.com%2Ffrontend_dev.php%2F"
+Mar 22 21:57:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:57:02 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/facebook/signin?forward=https%3A%2F%2Fdev.germanmastertour.com%2Ffrontend_dev.php%2F"
+Mar 22 21:57:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:57:02 symfony [info] {sfWebDebugLogger} Configuration 353.23 ms (8)
+Mar 22 21:57:02 symfony [info] {sfWebDebugLogger} Factories 136.98 ms (1)
+Mar 22 21:57:02 symfony [info] {sfWebDebugLogger} Action "home/index" 1.40 ms (1)
+Mar 22 21:57:02 symfony [info] {sfWebResponse} Send content (205 o)
+Mar 22 21:57:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:57:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:57:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:57:02 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:57:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:57:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:57:02 symfony [info] {sfPatternRouting} Match route "facebook_signin" (/facebook/signin) for /facebook/signin with parameters array (  'module' => 'sfFacebookConnectAuth',  'action' => 'signin',)
+Mar 22 21:57:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:57:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:57:02 symfony [info] {sfFacebookConnectAuthActions} Call "sfFacebookConnectAuthActions->executeSignin()"
+Mar 22 21:57:02 symfony [info] {sfFacebookConnect} Fb_uid from cookie : 1409787838
+Mar 22 21:57:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:57:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM (SELECT s.id FROM sf_guard_user s INNER JOIN sf_guard_user_profile s2 ON s.id = s2.user_id WHERE s2.facebook_uid = ? AND s.is_active = ? GROUP BY s.id) dctrn_count_query - (1409787838, 1)
+Mar 22 21:57:02 symfony [info] {sfFacebookConnect} No user exists with current facebook_uid
+Mar 22 21:57:03 symfony [info] {sfFacebookConnect} No user exists with current email hash
+Mar 22 21:57:03 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user (algorithm, is_active, is_super_admin, username, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (sha1, 1, 0, Facebook_1409787838, 2013-03-22 21:57:03, 2013-03-22 21:57:03)
+Mar 22 21:57:03 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.position AS s__position FROM sf_guard_user_profile s ORDER BY s.position desc LIMIT 1 - ()
+Mar 22 21:57:03 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user_profile (points, user_id, facebook_uid, position) VALUES (?, ?, ?, ?) - (0, 31, 1409787838, 31)
+Mar 22 21:57:03 symfony [info] {myUser} User is authenticated
+Mar 22 21:57:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (31)
+Mar 22 21:57:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (31)
+Mar 22 21:57:03 symfony [info] {myUser} Add credential(s) ""
+Mar 22 21:57:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 21:57:03 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ? WHERE id = ? - (2013-03-22 21:57:03, 31)
+Mar 22 21:57:04 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/"
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/"
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Configuration 256.42 ms (10)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Factories 50.17 ms (1)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Action "sfFacebookConnectAuth/signin" 1821.03 ms (1)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (9)
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send content (121 o)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:57:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:57:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:57:04 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:57:04 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:57:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:57:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 21:57:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 21:57:04 symfony [info] {sfFrontWebController} Redirect to "https://dev.germanmastertour.com/frontend_dev.php/create-profile"
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send header "Location: https://dev.germanmastertour.com/frontend_dev.php/create-profile"
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Configuration 14.24 ms (8)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Factories 54.77 ms (1)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Action "home/index" 55.06 ms (1)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send content (135 o)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:57:04 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 21:57:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:57:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:57:04 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 21:57:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:57:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 21:57:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 21:57:04 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/sfGuardAuth/templates/createProfileSuccess.php"
+Mar 22 21:57:04 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:57:04 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Configuration 75.79 ms (10)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Factories 52.63 ms (1)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 94.40 ms (1)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:57:04 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/createProfile" 41.74 ms (1)
+Mar 22 21:57:04 symfony [info] {sfWebResponse} Send content (48003 o)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Match route "create_profile" (/create-profile) for /create-profile with parameters array (  'module' => 'sfGuardAuth',  'action' => 'createProfile',)
+Mar 22 21:57:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:57:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:57:18 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeCreateProfile()"
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM sf_guard_user s WHERE s.id = ? - (31)
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.email_address = ?) - (songecko@gmail.com)
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user_profile SET first_name = ?, last_name = ?, email_address = ?, phone_number = ? WHERE id = ? - (Diego, D'amico, songecko@gmail.com, 011-42206768, 31)
+Mar 22 21:57:18 symfony [info] {sfFrontWebController} Redirect to "/frontend_dev.php/"
+Mar 22 21:57:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 22 21:57:18 symfony [info] {sfWebResponse} Send header "Location: /frontend_dev.php/"
+Mar 22 21:57:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} Configuration 14.53 ms (8)
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} Factories 52.17 ms (1)
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/createProfile" 121.77 ms (1)
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (6)
+Mar 22 21:57:18 symfony [info] {sfWebResponse} Send content (89 o)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 21:57:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 21:57:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 21:57:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 21:57:18 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 21:57:18 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 21:57:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 21:57:18 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 21:57:18 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:57:18 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 21:57:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 21:57:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} Configuration 36.13 ms (10)
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} Factories 52.74 ms (1)
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} Action "home/index" 60.17 ms (1)
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 21:57:18 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 41.83 ms (1)
+Mar 22 21:57:18 symfony [info] {sfWebResponse} Send content (44130 o)
+Mar 22 22:00:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 22:00:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 22:00:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 22:00:34 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 22:00:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 22:00:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 22:00:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 22:00:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 22:00:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 22:00:34 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 22:00:34 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 22:00:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 22:00:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 22:00:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 22:00:34 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 22:00:34 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:00:34 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:00:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 22:00:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 22:00:34 symfony [info] {sfWebDebugLogger} Configuration 11.09 ms (9)
+Mar 22 22:00:34 symfony [info] {sfWebDebugLogger} Factories 51.45 ms (1)
+Mar 22 22:00:34 symfony [info] {sfWebDebugLogger} Action "home/index" 71.56 ms (1)
+Mar 22 22:00:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 22:00:34 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 17.12 ms (1)
+Mar 22 22:00:34 symfony [info] {sfWebResponse} Send content (44153 o)
+Mar 22 22:00:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 22:00:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 22:00:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 22:00:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 22:00:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 22:00:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 22:00:36 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 22:00:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 22:00:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 22:00:36 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 22:00:36 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 22:00:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 22:00:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 22:00:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 22:00:36 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 22:00:36 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:00:36 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:00:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 22:00:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 22:00:36 symfony [info] {sfWebDebugLogger} Configuration 12.15 ms (9)
+Mar 22 22:00:36 symfony [info] {sfWebDebugLogger} Factories 52.30 ms (1)
+Mar 22 22:00:36 symfony [info] {sfWebDebugLogger} Action "home/index" 70.32 ms (1)
+Mar 22 22:00:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 22:00:36 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 17.08 ms (1)
+Mar 22 22:00:36 symfony [info] {sfWebResponse} Send content (44107 o)
+Mar 22 22:01:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 22:01:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 22:01:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 22:01:16 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 22:01:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 22:01:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 22:01:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 22:01:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 22:01:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 22:01:16 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 22:01:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 22:01:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 22:01:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 22:01:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 22:01:16 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 22:01:16 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:01:16 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:01:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 22:01:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 22:01:16 symfony [info] {sfWebDebugLogger} Configuration 11.32 ms (9)
+Mar 22 22:01:16 symfony [info] {sfWebDebugLogger} Factories 48.13 ms (1)
+Mar 22 22:01:16 symfony [info] {sfWebDebugLogger} Action "home/index" 59.65 ms (1)
+Mar 22 22:01:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 22:01:16 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 16.77 ms (1)
+Mar 22 22:01:16 symfony [info] {sfWebResponse} Send content (44107 o)
+Mar 22 22:01:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 22:01:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 22:01:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 22:01:18 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 22:01:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 22:01:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 22:01:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 22:01:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 22:01:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 22:01:18 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 22:01:18 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 22:01:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 22:01:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 22:01:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 22:01:18 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 22:01:18 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:01:18 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:01:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 22:01:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 22:01:18 symfony [info] {sfWebDebugLogger} Configuration 10.98 ms (9)
+Mar 22 22:01:18 symfony [info] {sfWebDebugLogger} Factories 47.90 ms (1)
+Mar 22 22:01:18 symfony [info] {sfWebDebugLogger} Action "home/index" 59.40 ms (1)
+Mar 22 22:01:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 22:01:18 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 16.89 ms (1)
+Mar 22 22:01:18 symfony [info] {sfWebResponse} Send content (44107 o)
+Mar 22 22:01:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 22:01:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 22:01:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 22:01:20 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 22:01:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 22:01:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 22:01:20 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 22:01:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 22:01:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 22:01:20 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 22:01:20 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 22:01:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 22:01:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 22:01:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 22:01:20 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 22:01:20 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:01:20 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:01:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 22:01:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 22:01:20 symfony [info] {sfWebDebugLogger} Configuration 10.95 ms (9)
+Mar 22 22:01:20 symfony [info] {sfWebDebugLogger} Factories 48.59 ms (1)
+Mar 22 22:01:20 symfony [info] {sfWebDebugLogger} Action "home/index" 60.07 ms (1)
+Mar 22 22:01:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 22:01:20 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 16.61 ms (1)
+Mar 22 22:01:20 symfony [info] {sfWebResponse} Send content (44107 o)
+Mar 22 22:01:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 22:01:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 22:01:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 22:01:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 22:01:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 22:01:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 22:01:48 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Mar 22 22:01:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 22:01:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 22:01:49 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Mar 22 22:01:49 symfony [notice] {sfWebDebugLogger}  Notice at D:\www\projects\warsgermantour\plugins\sfFacebookConnectPlugin\lib\sfFacebook.class.php on line 503 (Undefined offset: 1)
+Mar 22 22:01:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 22:01:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 22:01:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 22:01:49 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\modules/home/templates/indexSuccess.php"
+Mar 22 22:01:49 symfony [info] {sfPHPView} Decorate content with "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:01:49 symfony [info] {sfPHPView} Render "D:\www\projects\warsgermantour\apps\frontend\templates/layout.php"
+Mar 22 22:01:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 22 22:01:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=UTF-8"
+Mar 22 22:01:49 symfony [info] {sfWebDebugLogger} Configuration 11.11 ms (9)
+Mar 22 22:01:49 symfony [info] {sfWebDebugLogger} Factories 48.21 ms (1)
+Mar 22 22:01:49 symfony [info] {sfWebDebugLogger} Action "home/index" 61.71 ms (1)
+Mar 22 22:01:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 22 22:01:49 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 16.88 ms (1)
+Mar 22 22:01:49 symfony [info] {sfWebResponse} Send content (44172 o)
+Mar 22 22:01:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Mar 22 22:01:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Mar 22 22:01:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Mar 22 22:01:50 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Mar 22 22:01:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_signin" (/fb-connect/signin)
+Mar 22 22:01:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_facebook_connect_ajax_signin" (/fb-connect/ajax-signin)
+Mar 22 22:01:50 symfony [info] {sfPatternRouting} Match route "send_promo_code" (/send-promo-code) for /send-promo-code with parameters array (  'module' => 'home',  'action' => 'sendPromoCode',)
+Mar 22 22:01:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 22 22:01:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 22 22:01:50 symfony [info] {homeActions} Call "homeActions->executeSendPromoCode()"
+Mar 22 22:01:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 22 22:01:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (31)
+Mar 22 22:01:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.facebook_uid AS s__facebook_uid, s.twitter_username AS s__twitter_username, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.email_hash AS s__email_hash, s.profile_image AS s__profile_image, s.dni AS s__dni, s.phone_number AS s__phone_number, s.birth_date AS s__birth_date, s.points AS s__points, s.position AS s__position FROM sf_guard_user_profile s WHERE (s.user_id = ?) - (31)
+Mar 22 22:01:50 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user_profile SET position = ? WHERE id = ? - (, 31)
+Mar 22 22:01:50 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user_profile SET position = position + 1 WHERE (position < ? AND position >= ?) ORDER BY position DESC - (31, 1)
+Mar 22 22:01:50 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user_profile SET position = ? WHERE id = ? - (1, 31)

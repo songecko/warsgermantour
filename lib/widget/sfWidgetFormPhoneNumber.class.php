@@ -29,8 +29,8 @@ class sfWidgetFormPhoneNumber extends sfWidgetFormInputText
 		$areaCodeTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'maxlength' => 4, 'class' => 'enlinea', 'name' => $name.'[area_code]', 'value' => $areaCode), $attributes));
 		$lineNumberTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'maxlength' => 8, 'class' => 'enlinea lineNumber', 'name' => $name.'[line_number]', 'value' => $lineNumber), $attributes));
 		
-		$html = '<div class="cont">'.$areaCodeTag.'<p>011</p></div>';
-		$html .= '<div class="cont">'.$lineNumberTag.'<p>44445555</p></div>';
+		$html = $areaCodeTag.'-';
+		$html .= $lineNumberTag;
 		
 		return $html;						
 	}

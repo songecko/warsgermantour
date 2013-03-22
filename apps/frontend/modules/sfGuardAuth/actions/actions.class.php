@@ -93,18 +93,14 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
 	public function executeCreateProfile(sfWebRequest $request)
 	{
 		$user = $this->getUser();
+		$this->redirectUnless($user->isAuthenticated(), 'homepage');
+		
 		if($user->hasProfile())
 		{
-				$this->redirect($this->generateUrl('homepage'));
+			$this->redirect($this->generateUrl('homepage'));
 		}
 		
-		if($user->isAuthenticated())
-		{
-			$this->form = new RegisterForm($user->getGuardUser()->Profile);
-		}else
-		{
-			$this->form = new RegisterForm();
-		}
+		$this->form = new RegisterForm($user->getGuardUser()->Profile);
 		
 		if($request->isMethod('post'))
 		{
@@ -114,34 +110,11 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
 				$values = $this->form->getValues();
 				
 				try 
-				{					
-					if($user->isAuthenticated())
+				{		
+					if($this->form->save())
 					{
-						if($this->form->save())
-						{
-							$sfGuardUser = $user->getGuardUser();
-							$sfGuardUser->setUsername($values['email_address']);
-							$sfGuardUser->setPassword($values['password']);
-							$sfGuardUser->setEmailAddress($values['email_address']);
-							$sfGuardUser->Profile->setEmailAddress($values['email_address']);
-							$sfGuardUser->save();
-							
-							$this->redirect($this->generateUrl('tweet'));
-						}
-					}else
-					{
-						$sfGuardUser =  sfGuardUserTable::getInstance()->getOrCreateGuardUserByEmailAddress($values['email_address'], true);
-						$sfGuardUser->setPassword($values['password']);
-						$sfGuardUser->Profile->setFirstName($values['first_name']);
-						$sfGuardUser->Profile->setDni($values['dni']);
-						$sfGuardUser->Profile->setPhoneNumber($values['phone_number']);
-						$sfGuardUser->Profile->setBirthDate($values['birth_date']);						
-						$sfGuardUser->save();
-						
-						$user->signIn($sfGuardUser);
-						
-						$this->redirect($this->generateUrl('ranking'));
-					}
+						$this->redirect($this->generateUrl('homepage'));
+					}					
 				}catch (sfValidatorError $exception)
 				{
 				}
