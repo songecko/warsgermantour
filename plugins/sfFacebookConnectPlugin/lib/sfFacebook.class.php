@@ -500,6 +500,9 @@ class sfFacebook
   public static function getSignedRequest(sfWebRequest $request)
   {
   	$signed_request = $request->getParameter('signed_request');
+  	if(!$signed_request)
+  		return null;
+  	
 	list($encoded_sig, $payload) = explode('.', $signed_request, 2);
 
 	// decode the data

@@ -13,5 +13,8 @@ class PromoCodeForm extends BasePromoCodeForm
 	public function configure()
 	{
 		$this->useFields(array('code'));
+		
+		$this->setWidget('code', new sfWidgetFormPromoCode());
+		$this->setValidator('code', new sfValidatorPromoCode());
 	}
 }

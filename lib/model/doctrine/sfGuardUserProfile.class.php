@@ -12,5 +12,84 @@
  */
 class sfGuardUserProfile extends BasesfGuardUserProfile
 {
-
+	private $facebookProfile;
+	
+	/**
+	 * @return Boolean
+	 */
+	public function isFacebookUser()
+	{
+		return ($this->getFacebookUid())?true:false;
+	}
+	
+	/**
+	 * @return Boolean
+	 */
+	public function isTwitterUser()
+	{
+		return ($this->getTwitterUsername())?true:false;
+	}
+	
+	public function publishFacebookPost($comment, $link)
+	{
+		$publishStream = $this->getFacebook()->api("/".$comment->User->Profile->getFacebookUid()."/feed", 'post', array(
+			'message' => "Se vos mismo en 140 caracteres y llevate un Real Led TV de RCA, ingresá en http://sevosmismo.com.",
+			'link'    => $link,
+			'name'    => 'RCA - Se Vos Mismo',
+			'description'=> 'Se vos mismo en 140 caracteres y llevate un Real Led TV de RCA, ingresá en http://sevosmismo.com.'
+		));
+	}
+	
+	/**
+	 * @return Array
+	 */
+	public function getFacebookProfile()
+	{
+		if(!$this->facebookProfile)
+		{
+			$facebook = sfFacebook::getFacebookClient();;
+	
+			try {
+				$this->facebookProfile = $facebook->api('/'.$this->getFacebookUid().'?fields=id,name,picture');
+			} catch (FacebookApiException $e) {
+				error_log($e);
+				throw $e;
+			}
+		}
+	
+		return $this->facebookProfile;
+	}
+	
+	/**
+	 * @return String
+	 */
+	public function getSocialName()
+	{
+		if($this->isFacebookUser())
+		{
+			$facebookProfile = $this->getFacebookProfile();
+			return isset($facebookProfile['name'])?$facebookProfile['name']:'Anónimo';
+		}else
+		{
+			return ($this->getTwitterUsername())?'@'.$this->getTwitterScreenName():'Anónimo';
+		}
+	}
+	
+	/**
+	 * @return String
+	 */
+	public function getSocialPicture()
+	{
+		if($this->isFacebookUser())
+		{
+			$facebookProfile = $this->getFacebookProfile();
+			return isset($facebookProfile['picture']['data']['url'])?$facebookProfile['picture']['data']['url']:image_path('avatar.jpg');
+		}else if($this->isTwitterUser())
+		{
+			return ($this->getTwitterUsername())?"http://api.twitter.com/1/users/profile_image/".$this->getTwitterScreenName().".json?size=bigger":image_path('avatar.jpg');
+		}else
+		{
+			return image_path('avatar.jpg');
+		}	
+	}
 }

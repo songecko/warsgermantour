@@ -25,7 +25,14 @@ prelike:
   url:    /prelike
   param:  { module: home, action: prelike }
 
+bases:
+  url:    /bases
+  param:  { module: home, action: bases }
 
+como:
+  url:    /como
+  param:  { module: home, action: como }
+  
 # default rules
 homepage:
   url:    /

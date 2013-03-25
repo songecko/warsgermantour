@@ -213,6 +213,31 @@ class sfGuardUserTable extends PluginsfGuardUserTable
     	return $topUsers;
     }   
     
+    public function getUsersOrderByPositionQuery($limit = false)
+    {
+    	$q = $this->createQuery('u');
+    	$q->leftJoin('u.Profile p');
+    	$q->orderBy('p.position ASC');
+    
+    	if($limit)
+    	{
+    		$q->limit($limit);
+    	}
+    	 
+    	return $q;
+    }
+    
+    /**
+     * @param unknown_type $limit
+     * @return Doctrine_Collection
+     */
+    public function getUsersOrderByPosition($limit = false)
+    {
+    	$q = $this->getUsersOrderByPositionQuery($limit);
+    	 
+    	return $q->execute();
+    }
+    
     public function getRankingUsersWithFilter($limit = false, $filter)
     {
     	$q = $this->getRankingUsersQuery($limit);

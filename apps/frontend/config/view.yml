@@ -3,16 +3,17 @@
 
 default:
   http_metas:
-    content-type: text/html; charset=UTF-8
+    content-type: text/html; charset=utf-8
 
   metas:
-    title:         "German Master Tour"
+    title:         "Warsteiner - German Master Tour"
     #description:  symfony project
     #keywords:     symfony, project
     #language:     en
     #robots:       index, follow
 
   stylesheets:
+    - http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic
     - http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/ui-darkness/jquery-ui.css
     - jquery.qtip.min.css
     - /js/colorbox/example5/colorbox.css    

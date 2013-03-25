@@ -108,15 +108,17 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
 			if($this->form->isValid())
 			{
 				$values = $this->form->getValues();
-				
-				try 
-				{		
-					if($this->form->save())
-					{
-						$this->redirect($this->generateUrl('homepage'));
-					}					
-				}catch (sfValidatorError $exception)
+				if(isset($values['accept_bases']) && $values['accept_bases'] === true)
 				{
+					try 
+					{		
+						if($this->form->save())
+						{
+							return $this->redirect($this->generateUrl('homepage'));
+						}					
+					}catch (sfValidatorError $exception)
+					{
+					}
 				}
 			}
 		}

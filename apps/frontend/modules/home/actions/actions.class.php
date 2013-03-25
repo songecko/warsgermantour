@@ -29,6 +29,7 @@ class homeActions extends sfActions
 	 */
 	public function executeIndex(sfWebRequest $request)
 	{	
+		//$this->getUser()->signOut();
 		$signedRequest = sfFacebook::getSignedRequest($request);
 		$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $request->getHttpHeader('User-Agent')) && !$this->getUser()->getAttribute('fullversion', false));		
 		$isOnFacebook = isset($signedRequest['page']['liked']);
@@ -52,18 +53,31 @@ class homeActions extends sfActions
 		$this->redirectUnless($this->getUser()->hasProfile(), 'create_profile');
 		
 		//START THE HOMEPAGE ACTION		
+		$this->airplaneUsers = sfGuardUserTable::getInstance()->getUsersOrderByPosition(23);
+		$this->form = new PromoCodeForm();
+		if($request->hasParameter($this->form->getName()))
+		{
+			$this->form->bind($request->getParameter($this->form->getName()));
+		}
 		
-		if ($isMobile)
+		/*if ($isMobile)
 		{
 			$this->setLayout('mobile_layout');
 			
 			return 'SuccessMobile';
-		}
+		}*/
 	}
 		
 	public function executePrelike(sfWebRequest $request)
 	{
-		
+	}
+	
+	public function executeBases(sfWebRequest $request)
+	{	
+	}
+	
+	public function executeComo(sfWebRequest $request)
+	{
 	}
 	
 	public function executeFullVersion(sfWebRequest $request)
@@ -75,24 +89,31 @@ class homeActions extends sfActions
 	
 	public function executeSendPromoCode(sfWebRequest $request)
 	{
+		$user = $this->getUser();
 		$this->user = $this->getUser()->getGuardUser();
-		$this->user->Profile->moveToFirst();
-		die;
-		/*$this->promoCodeForm = new PromoCodeForm();
+				
+		$this->redirectUnless($user->isAuthenticated(), 'homepage');
+		
+		$this->form = new PromoCodeForm();
 		
 		if($request->isMethod('post'))
 		{
-			$this->promoCodeForm->bind($request->getParameter($this->promoCodeForm->getName()));
-			if ($this->promoCodeForm->isValid())
+			$this->form->bind($request->getParameter($this->form->getName()));
+
+			if ($this->form->isValid())
 			{
-				$values = $this->promoCodeForm->getValues();
-		
+				$values = $this->form->getValues();
+				
 				$promoCode = PromoCodeTable::getInstance()->getByCode($values['code']);
-				if($promoCode) //Si el codigo existe
+				if(!$promoCode) //Si el codigo no existe
 				{
-					$anyUserHasPromoCode = UserPromoCodeTable::getInstance()->getByPromoCode($promoCode->getId());
+					$promoCode = new PromoCode();
+					$promoCode->setCode($values['code']);
+					$promoCode->save();
+					
+					/*$anyUserHasPromoCode = UserPromoCodeTable::getInstance()->getByPromoCode($promoCode->getId());
 					if(!$anyUserHasPromoCode) //Si el codigo no fue cargado ya por algun usuario
-					{
+					{*/
 						try
 						{
 							//Cargamos el codigo al usuario
@@ -103,28 +124,30 @@ class homeActions extends sfActions
 							$userHasPromoCode->save();
 				
 							//Add points
-							$this->user->Profile->setPoints($this->user->Profile->getPoints() + sfConfig::get('app_points_for_code'));
+							$this->user->Profile->setPoints($this->user->Profile->getPoints() + 1);
 							$this->user->save();
+							$this->user->Profile->moveToFirst();
 								
-							$this->getUser()->setFlash('success', 'C&oacute;digo ingresado correctamente, has sumado '.sfConfig::get('app_points_for_code').' cent&iacute;metros');								
+							$this->getUser()->setFlash('success', 'C&oacute;digo ingresado correctamente, has ingresado al avi&oacute;n.');								
+							
 							
 						} catch (Doctrine_Exception $e)
 						{
 							$this->getUser()->setFlash('error', 'Hubo un problema al cargar el c&oacute;digo, vuelva a intentarlo mas tarde.');
 						}
-					}else
+					/*}else
 					{
 						$this->getUser()->setFlash('error', 'C&oacute;digo ya ingresado previamente.');
-					}
+					}*/
 				}else
 				{
-					$this->getUser()->setFlash('error', 'El c&oacute;digo ingresado no es v&aacute;lido.');
+					$this->getUser()->setFlash('error', 'C&oacute;digo ya ingresado previamente.');
 				}
 			}else
 			{
-				$this->getUser()->setFlash('error', 'El c&oacute;digo ingresado no es v&aacute;lido.');
+				$this->forward('home', 'index');
 			}		
-		}*/
+		}
 		
 		$this->redirect($this->generateUrl('homepage'));
 	}
