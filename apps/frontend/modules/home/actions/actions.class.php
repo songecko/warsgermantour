@@ -29,10 +29,9 @@ class homeActions extends sfActions
 	 */
 	public function executeIndex(sfWebRequest $request)
 	{	
-		//$this->getUser()->signOut();
-		$signedRequest = sfFacebook::getSignedRequest($request);
+		//$this->getUser()->signOut();die;
 		$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $request->getHttpHeader('User-Agent')) && !$this->getUser()->getAttribute('fullversion', false));		
-		$isOnFacebook = isset($signedRequest['page']['liked']);
+		$isOnFacebook = $this->getUser()->isOnFacebookIframe();
 		
 		//if the user is not on facebook and not on mobile, redirect to facebook tab page
 		if(!$isOnFacebook && !$isMobile)
@@ -40,8 +39,8 @@ class homeActions extends sfActions
 			//$this->redirect('https://www.facebook.com/WarsteinerArgentina/app_465909386814672');
 		}
 			
-		//if the user like is on facebook and not like the facenook page, redirect
-		if($isOnFacebook && $signedRequest['page']['liked'] === false)
+		//if the user like is on facebook and not like the facebook page, redirect
+		if($isOnFacebook && $this->getUser()->isPageLike() !== true)
 		{
 			$this->redirect('prelike');
 		}

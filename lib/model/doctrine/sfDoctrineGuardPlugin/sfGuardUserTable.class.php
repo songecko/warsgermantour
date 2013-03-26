@@ -217,6 +217,7 @@ class sfGuardUserTable extends PluginsfGuardUserTable
     {
     	$q = $this->createQuery('u');
     	$q->leftJoin('u.Profile p');
+	$q->andWhere('p.points > 0');
     	$q->orderBy('p.position ASC');
     
     	if($limit)

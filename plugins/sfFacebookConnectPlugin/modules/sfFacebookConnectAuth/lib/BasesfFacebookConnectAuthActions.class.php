@@ -70,6 +70,8 @@ class BasesfFacebookConnectAuthActions extends sfActions
 
 			$signin_url = $forward != '' ? $forward : $signin_url;
 
+			$signin_url = $this->getContext()->getUser()->getUrlAfterLogin();
+			
 			$this->redirect('' != $signin_url ? $signin_url : '@homepage');
 		}
 		

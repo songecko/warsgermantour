@@ -2,7 +2,7 @@
   <body id="pop">
 <?php end_slot(); ?>
 <div class="content clearfix"> 
-	<a class="close" href="<?php echo url_for('homepage') ?>" target="_self">cerrar</a>
+	<a class="close" href="<?php echo url_for('homepage') ?>">cerrar</a>
 	<h2>bases y condiciones</h2>
     <div class="scroll clearfix">      
 		<h3>articulo 1</h3>
