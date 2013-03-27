@@ -17,5 +17,6 @@ all:
     oauth_token_secret: 'Qn2Zyt9bDjG6iq5r1tLAYnS3j8Nh8yQlzakLK00IDM'
   
   facebook:
-    api_key:            '101088859967755'
-    secret_key:         '6d0f72dbf6f8aad57c6adc19eeca2f50'
+    api_key:            '465909386814672'
+    secret_key:         'e3280990bd6ea94aef294463c94c6070'
+    tab_url:            'https://www.facebook.com/WarsteinerArgentina/app_465909386814672'

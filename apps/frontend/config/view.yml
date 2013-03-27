@@ -15,7 +15,7 @@ default:
   stylesheets:
     - https://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic
 #    - https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/ui-darkness/jquery-ui.css
-#    - jquery.qtip.min.css
+    - jquery.qtip.min.css
 #    - /js/colorbox/example5/colorbox.css    
 #    - jquery.fancybox.css
     - main.css   
@@ -26,7 +26,7 @@ default:
 #    - unitpngfix/unitpngfix.js
 #    - colorbox/colorbox/jquery.colorbox-min.js
 #    - "http://platform.twitter.com/anywhere.js?id=<?php echo sfConfig::get('app_twitter_api_key') ?>&v=1"
-#    - jquery.qtip.min.js
+    - jquery.qtip.min.js
 #    - jquery.fancybox.pack.js
     - sfFacebook.js
 

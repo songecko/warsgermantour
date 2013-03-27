@@ -36,7 +36,7 @@ class homeActions extends sfActions
 		//if the user is not on facebook and not on mobile, redirect to facebook tab page
 		if(!$isOnFacebook && !$isMobile)
 		{
-			//$this->redirect('https://www.facebook.com/WarsteinerArgentina/app_465909386814672');
+			//$this->redirect(sfConfig::get('app_facebook_tab_url'));
 		}
 			
 		//if the user like is on facebook and not like the facebook page, redirect
@@ -126,10 +126,13 @@ class homeActions extends sfActions
 							$this->user->Profile->setPoints($this->user->Profile->getPoints() + 1);
 							$this->user->save();
 							$this->user->Profile->moveToFirst();
-								
-							$this->getUser()->setFlash('success', 'C&oacute;digo ingresado correctamente, has ingresado al avi&oacute;n.');								
 							
+							//Send facebook Post
+							$tabUrl = sfConfig::get('app_facebook_tab_url');
+							$message = "Estoy participando por un viaje a Alemania en el German Master Tour de Warsteiner. Vos también podés participar acá ".$tabUrl.".";
+							$this->user->Profile->publishToFacebook($message, $tabUrl);
 							
+							$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');								
 						} catch (Doctrine_Exception $e)
 						{
 							$this->getUser()->setFlash('error', 'Hubo un problema al cargar el c&oacute;digo, vuelva a intentarlo mas tarde.');

@@ -59,18 +59,15 @@ class BasesfFacebookConnectAuthActions extends sfActions
 
 		if ($sfGuardUser)
 		{
-			$this->getContext()->getUser()->signIn($sfGuardUser);
+			$user->signIn($sfGuardUser);
 
-			$referer = $user->getAttribute('referer', $this->getRequest()->getReferer());
-			$user->getAttributeHolder()->remove('referer');
+			if($user->hasAttribute('referer'))
+			{
+				$referer = $user->getAttribute('referer', $this->getRequest()->getReferer());
+				$user->getAttributeHolder()->remove('referer');
+			}
 
 			$signin_url = sfConfig::get('app_sf_guard_plugin_success_signin_url', $referer);
-
-			$forward = $request->getParameter('forward');
-
-			$signin_url = $forward != '' ? $forward : $signin_url;
-
-			$signin_url = $this->getContext()->getUser()->getUrlAfterLogin();
 			
 			$this->redirect('' != $signin_url ? $signin_url : '@homepage');
 		}
@@ -91,20 +88,14 @@ class BasesfFacebookConnectAuthActions extends sfActions
 
 			if (!$user->hasAttribute('referer'))
 			{
-				if($request->getParameter('forward', false))
-				{
-					$user->setAttribute('referer', $request->getParameter('forward'));
-				}else
-				{
-					$user->setAttribute('referer', $this->getRequest()->getUri());
-				}
+				$user->setAttribute('referer', $user->getUrlAfterLogin());
 			}
 
 			//If not force to login, only show the facebook connect view
 			$facebook = sfFacebook::getFacebookClient();
 					
 			$this->facebookConnectUrl = $facebook->getLoginUrl(array(
-					'scope' => 'email, publish_actions'
+				'scope' => 'email, publish_actions'
 			));
 							
 			return sfView::SUCCESS;

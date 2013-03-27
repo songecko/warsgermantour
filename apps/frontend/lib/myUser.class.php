@@ -51,10 +51,10 @@ class myUser extends sfGuardSecurityUser
 	{
 		if($this->isOnFacebookIframe())
 		{
-			return 'https://www.facebook.com/WarsteinerArgentina/app_465909386814672';
+			return sfConfig::get('app_facebook_tab_url');
 		}else
 		{
-			return '@homepage';
+			return $this->context->getController()->genUrl('@homepage');
 		}
 	}
 }
