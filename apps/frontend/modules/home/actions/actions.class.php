@@ -67,6 +67,11 @@ class homeActions extends sfActions
 		}*/
 	}
 		
+	public function executeWinners(sfWebRequest $request)
+	{
+		$this->winners = sfGuardUserTable::getInstance()->getUsersOrderByPosition(5);
+	}
+	
 	public function executePrelike(sfWebRequest $request)
 	{
 	}
@@ -129,8 +134,8 @@ class homeActions extends sfActions
 							
 							//Send facebook Post
 							$tabUrl = sfConfig::get('app_facebook_tab_url');
-							$message = "Estoy participando por un viaje a Alemania en el German Master Tour de Warsteiner. Vos también podés participar acá ".$tabUrl.".";
-							$this->user->Profile->publishToFacebook($message, $tabUrl);
+							$message = "Estoy participando por un viaje a Alemania en el German Master Tour de Warsteiner.";
+							$this->user->Profile->publishFacebookPost($message, $tabUrl);
 							
 							$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');								
 						} catch (Doctrine_Exception $e)

@@ -19,4 +19,5 @@ all:
   facebook:
     api_key:            '465909386814672'
     secret_key:         'e3280990bd6ea94aef294463c94c6070'
-    tab_url:            'https://www.facebook.com/WarsteinerArgentina/app_465909386814672'
+#    tab_url:            'https://www.facebook.com/WarsteinerArgentina/app_465909386814672'
+    tab_url:            'https://www.facebook.com/KelvinatorArgentina/app_465909386814672'

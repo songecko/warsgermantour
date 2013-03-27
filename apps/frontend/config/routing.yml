@@ -25,6 +25,10 @@ prelike:
   url:    /prelike
   param:  { module: home, action: prelike }
 
+winners:
+  url:    /winners
+  param:  { module: home, action: winners }
+  
 bases:
   url:    /bases
   param:  { module: home, action: bases }

@@ -39,7 +39,11 @@ class myUser extends sfGuardSecurityUser
 		$request = sfContext::getInstance()->getRequest();
 		if($this->isOnFacebookIframe($request))
 		{
-			$signedRequest = $this->getAttribute('signed_request');
+			$signedRequest = sfFacebook::getSignedRequest($request);
+			if(!isset($signedRequest['page']['liked']))
+			{
+				$signedRequest = $this->getAttribute('signed_request');
+			}
 			
 			return $signedRequest['page']['liked'];
 		}

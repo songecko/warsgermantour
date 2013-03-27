@@ -3,9 +3,8 @@
 <?php end_slot(); ?>
 <div class="column_3">
 	<ul class="navy">
-		<li><a href="<?php echo url_for('como') ?>"><img src="<?php echo image_path(
-		'bullet.png') ?>" /> como participar</a></li>
-		<li><a href="#"><img src="<?php echo image_path('bullet.png') ?>" /> ganadores</a></li>
+		<li><a href="<?php echo url_for('como') ?>"><img src="<?php echo image_path('bullet.png') ?>" /> como participar</a></li>
+		<li><a href="<?php echo url_for('winners') ?>"><img src="<?php echo image_path('bullet.png') ?>" /> ganadores</a></li>
     </ul>
 	<div class="logo"><img src="<?php echo image_path('logo.png') ?>" alt="Warsteiner" /></div>
     <h1>cargá lote y hora para ingresar<span>en el avión</span></h1>
@@ -13,31 +12,28 @@
 <div class="column_2">
 	<div class="pasajeros clearfix">
 		<ul>
-			<?php foreach ($airplaneUsers as $airplaneUser) : ?>
+			<?php foreach($airplaneUsers as $airplaneUser): ?>
 			<li>
-				<a class="user<?php echo ($sf_user->getGuardUser()->getId()
-			== $airplaneUser->getId()) ? ' propio' : '' ?>" href="#1">
+				<a class="user<?php echo ($sf_user->getGuardUser()->getId() == $airplaneUser->getId())?' propio':''?>" href="#1">
 					<img src="<?php echo $airplaneUser->getSocialPicture() ?>" />
 					<span>
 						<img src="<?php echo $airplaneUser->getSocialPicture() ?>" />
           				<div class="name">
           					<strong><?php echo $airplaneUser->getFullname() ?></strong><br /><br />
-            				Lotes cargados:<em><?php echo $airplaneUser
-			->Profile->getPoints() ?></em>
+            				Lotes cargados:<em><?php echo $airplaneUser->Profile->getPoints() ?></em>
             			</div>
 					</span>
 				</a>
 			</li>
-			<?php endforeach; ?>
+			<?php endforeach;?>
 		</ul>
 	</div>
 </div>
 <div class="column_3">
 	<div class="carga">
-		<form method="post" action="<?php echo url_for('send_promo_code'); ?>">
+		<form method="post" action="<?php echo url_for('send_promo_code');?>">
 			<?php echo $form['_csrf_token']->render() ?>
-			<?php echo $form['code']
-		->render(array('class' => $form['code']->hasError() ? 'error' : '')) ?>
+			<?php echo $form['code']->render(array('class' => $form['code']->hasError()?'error':'')) ?>
 			<input type="submit" class="btn_cargar" value="cargar" />
 		</form>
 	</div>
@@ -69,9 +65,9 @@ $(document).ready(function()
 		},
 		hide: false, // Don't specify a hide event either!
 		style: {
-			classes: 'ui-tooltip-<?php echo isset($error) ? 'red' : 'light' ?> ui-tooltip-shadow'
+			classes: 'ui-tooltip-<?php echo isset($error)?'red':'light' ?> ui-tooltip-shadow'
 		}
 	});
 });
 </script>
-<?php endif; ?>
+<?php endif;?>
