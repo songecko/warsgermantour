@@ -30,6 +30,7 @@
 	</div>
 </div>
 <div class="column_3">
+	<?php if(!$isOnAirplane): ?>
 	<div class="carga">
 		<form method="post" action="<?php echo url_for('send_promo_code');?>">
 			<?php echo $form['_csrf_token']->render() ?>
@@ -37,6 +38,7 @@
 			<input type="submit" class="btn_cargar" value="cargar" />
 		</form>
 	</div>
+	<?php endif; ?>
 	<div class="premios"><img src="<?php echo image_path('premios.png') ?>" alt="premios" /></div>
 </div>
 <?php if(isset($success) || isset($error)): ?>

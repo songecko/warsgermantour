@@ -53,6 +53,14 @@ class homeActions extends sfActions
 		
 		//START THE HOMEPAGE ACTION		
 		$this->airplaneUsers = sfGuardUserTable::getInstance()->getUsersOrderByPosition(23);
+		$this->isOnAirplane = false;
+		foreach($this->airplaneUsers as $airplaneUser)
+		{
+			if($airplaneUser->getId() === $this->getUser()->getGuardUser()->getId())
+			{
+				$this->isOnAirplane = true;
+			}
+		}
 		$this->form = new PromoCodeForm();
 		if($request->hasParameter($this->form->getName()))
 		{
