@@ -17,7 +17,7 @@ abstract class BaseWinnerForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
       'user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('user'), 'add_empty' => false)),
-      'price'      => new sfWidgetFormChoice(array('choices' => array('premio1' => 'premio1', 'premio2' => 'premio2', 'premio3' => 'premio3'))),
+      'price'      => new sfWidgetFormChoice(array('choices' => array('Heladera' => 'Heladera', 'Giftpacks' => 'Giftpacks', 'Pasajes' => 'Pasajes', 'Remeras' => 'Remeras', 'Remeras + Giftpack' => 'Remeras + Giftpack'))),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
@@ -25,7 +25,7 @@ abstract class BaseWinnerForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('user'))),
-      'price'      => new sfValidatorChoice(array('choices' => array(0 => 'premio1', 1 => 'premio2', 2 => 'premio3'), 'required' => false)),
+      'price'      => new sfValidatorChoice(array('choices' => array(0 => 'Heladera', 1 => 'Giftpacks', 2 => 'Pasajes', 3 => 'Remeras', 4 => 'Remeras + Giftpack'), 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));

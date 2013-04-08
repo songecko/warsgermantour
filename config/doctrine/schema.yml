@@ -57,6 +57,6 @@ Winner:
     Timestampable:    ~
   columns:
     user_id:          { type: integer, notnull: true }
-    price:            { type: enum, values: [premio1, premio2, premio3] }
+    price:            { type: enum, values: ["Heladera", "Giftpacks", "Pasajes", "Remeras", "Remeras + Giftpack"] }
   relations:
     user:             { class: sfGuardUser, local: user_id, foreign: id, onDelete: cascade, foreignAlias: UserWinner }

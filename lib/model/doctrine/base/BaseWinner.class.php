@@ -34,9 +34,11 @@ abstract class BaseWinner extends sfDoctrineRecord
              'type' => 'enum',
              'values' => 
              array(
-              0 => 'premio1',
-              1 => 'premio2',
-              2 => 'premio3',
+              0 => 'Heladera',
+              1 => 'Giftpacks',
+              2 => 'Pasajes',
+              3 => 'Remeras',
+              4 => 'Remeras + Giftpack',
              ),
              ));
     }
