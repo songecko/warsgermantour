@@ -4,6 +4,7 @@
 # default values
 all:
   sf_guard_plugin:
+    success_signin_url: "@homepage"
     routes_register: true
     
   sf_admin_dash:

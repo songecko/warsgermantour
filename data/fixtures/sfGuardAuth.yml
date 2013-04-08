@@ -1,6 +1,6 @@
 sfGuardUser:
   User_admin:
-    first_name:     AdminDoe
+    first_name:     Admin
     email_address:  admin@admin.com
     username:       admin
     password:       123456
