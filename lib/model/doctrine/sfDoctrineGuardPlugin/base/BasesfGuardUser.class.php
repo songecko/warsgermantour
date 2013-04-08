@@ -24,6 +24,7 @@
  * @property sfGuardUserProfile $Profile
  * @property Doctrine_Collection $Tweets
  * @property Doctrine_Collection $UserPromoCodes
+ * @property Doctrine_Collection $UserWinner
  * 
  * @method string                getFirstName()             Returns the current record's "first_name" value
  * @method string                getLastName()              Returns the current record's "last_name" value
@@ -44,6 +45,7 @@
  * @method sfGuardUserProfile    getProfile()               Returns the current record's "Profile" value
  * @method Doctrine_Collection   getTweets()                Returns the current record's "Tweets" collection
  * @method Doctrine_Collection   getUserPromoCodes()        Returns the current record's "UserPromoCodes" collection
+ * @method Doctrine_Collection   getUserWinner()            Returns the current record's "UserWinner" collection
  * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
  * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
@@ -63,6 +65,7 @@
  * @method sfGuardUser           setProfile()               Sets the current record's "Profile" value
  * @method sfGuardUser           setTweets()                Sets the current record's "Tweets" collection
  * @method sfGuardUser           setUserPromoCodes()        Sets the current record's "UserPromoCodes" collection
+ * @method sfGuardUser           setUserWinner()            Sets the current record's "UserWinner" collection
  * 
  * @package    quieroeldiscorolling
  * @subpackage model
@@ -165,6 +168,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasMany('UserPromoCode as UserPromoCodes', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasMany('Winner as UserWinner', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

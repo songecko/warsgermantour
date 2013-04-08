@@ -51,3 +51,12 @@ PromoCode:
     Timestampable:    ~
   columns:
     code:             { type: string(100), notnull: true }
+    
+Winner:
+  actAs:
+    Timestampable:    ~
+  columns:
+    user_id:          { type: integer, notnull: true }
+    price:            { type: enum, values: [premio1, premio2, premio3] }
+  relations:
+    user:             { class: sfGuardUser, local: user_id, foreign: id, onDelete: cascade, foreignAlias: UserWinner }

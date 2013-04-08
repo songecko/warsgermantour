@@ -53,12 +53,14 @@ class myUser extends sfGuardSecurityUser
 	
 	public function getUrlAfterLogin()
 	{
+		$context = sfContext::getInstance();
+		
 		if($this->isOnFacebookIframe())
 		{
 			return sfConfig::get('app_facebook_tab_url');
 		}else
 		{
-			return $this->context->getController()->genUrl('@homepage');
+			return $context->getController()->genUrl('@homepage');
 		}
 	}
 }

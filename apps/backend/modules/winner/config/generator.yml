@@ -1,0 +1,39 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Winner
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          winner
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    css:                   nothing   #setting the css to a placeholder
+
+    config:
+      actions: ~
+      fields:
+        user_id:           { label: "Usuario" }
+        user:              { label: "Usuario" }
+        price:             { label: "Premio" }
+        created_at:        { label: "Fecha" }
+
+      list:
+        title:             Ganadores
+        display:           [ created_at, user, price ]
+        max_per_page:      25
+
+      filter:
+        display:           [ user_id, created_at ]
+
+      form:
+        display:
+          Datos:           [ created_at, user_id, price ]
+
+      edit:
+        title:             Editar ganador
+
+      new:
+        title:             Nuevo ganador
