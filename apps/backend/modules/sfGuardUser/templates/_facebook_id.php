@@ -1,0 +1,1 @@
+<a href="http://facebook.com/<?php echo $sf_guard_user->getProfile()->getFacebookUid() ?>" target="_blank"><?php echo $sf_guard_user->getProfile()->getFacebookUid() ?></a>

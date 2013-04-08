@@ -77,7 +77,7 @@ class homeActions extends sfActions
 		
 	public function executeWinners(sfWebRequest $request)
 	{
-		$this->winners = sfGuardUserTable::getInstance()->getUsersOrderByPosition(5);
+		$this->winners = WinnerTable::getInstance()->getWinnersOrderByDate();
 	}
 	
 	public function executePrelike(sfWebRequest $request)

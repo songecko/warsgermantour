@@ -16,9 +16,14 @@ all:
     include_path:                 false
     include_jquery_no_conflict:   false
     logout:                       true
-    login_route:                  @sf_guard_signin
-    logout_route:                 @sf_guard_signout
+    login_route:                  "@sf_guard_signin"
+    logout_route:                 "@sf_guard_signout"
     items:
+      Participantes:
+        url:          sf_guard_user
+        image:        users.png
+        credentials:  [admin]
       Ganadores:
         url:          winner
-        image:        textcloud.png
+        image:        prize_winner.png
+        credentials:  [admin]

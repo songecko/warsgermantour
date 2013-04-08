@@ -12,5 +12,8 @@
  */
 class Winner extends BaseWinner
 {
-
+	public function getFullname()
+	{
+		$this->user->getFullname();
+	}
 }

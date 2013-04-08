@@ -15,8 +15,8 @@ generator:
     config:
       actions: ~
       fields:
-        user_id:           { label: "Usuario" }
-        user:              { label: "Usuario" }
+        user_id:           { label: "Participante" }
+        user:              { label: "Participante" }
         price:             { label: "Premio" }
         created_at:        { label: "Fecha" }
 

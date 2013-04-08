@@ -1,0 +1,1 @@
+<img src="<?php echo $sf_guard_user->getSocialPicture() ?>" style="max-width: 30px;" />

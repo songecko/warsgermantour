@@ -22,12 +22,12 @@ class myUser extends sfGuardSecurityUser
 	{
 		$request = sfContext::getInstance()->getRequest();
 		$signedRequest = sfFacebook::getSignedRequest($request);
-		if($this->hasAttribute('signed_request'))
-		{ 
-			return true;
-		}else if(isset($signedRequest['page']['liked']))
+		if(isset($signedRequest['page']['liked']))
 		{
 			$this->setAttribute('signed_request', $signedRequest);
+			return true;
+		}else if($this->hasAttribute('signed_request'))
+		{ 
 			return true;
 		}
 		
@@ -37,7 +37,7 @@ class myUser extends sfGuardSecurityUser
 	public function isPageLike()
 	{
 		$request = sfContext::getInstance()->getRequest();
-		if($this->isOnFacebookIframe($request))
+		if($this->isOnFacebookIframe())
 		{
 			$signedRequest = sfFacebook::getSignedRequest($request);
 			if(!isset($signedRequest['page']['liked']))

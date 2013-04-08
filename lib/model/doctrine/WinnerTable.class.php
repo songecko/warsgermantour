@@ -16,4 +16,30 @@ class WinnerTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Winner');
     }
+    
+    public function getWinnersOrderByDateQuery($limit = false)
+    {
+    	$q = $this->createQuery('w');
+    	$q->leftJoin('w.user u');
+    	$q->leftJoin('u.Profile p');
+    	$q->orderBy('w.created_at ASC');
+    
+    	if($limit)
+    	{
+    		$q->limit($limit);
+    	}
+    	 
+    	return $q;
+    }
+    
+    /**
+     * @param unknown_type $limit
+     * @return Doctrine_Collection
+     */
+    public function getWinnersOrderByDate($limit = false)
+    {
+    	$q = $this->getWinnersOrderByDateQuery($limit);
+    	 
+    	return $q->execute();
+    }
 }

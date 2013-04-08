@@ -75,4 +75,9 @@ class sfGuardUser extends PluginsfGuardUser
 	{
 		return sfGuardUserProfileTable::getInstance()->getUserRankingPosition($this->getId());
 	}
+	
+	public function __toString()
+	{
+		return $this->getFullname();
+	}
 }
