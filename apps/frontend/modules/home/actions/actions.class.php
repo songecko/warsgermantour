@@ -147,7 +147,16 @@ class homeActions extends sfActions
 							//Send facebook Post
 							$tabUrl = sfConfig::get('app_facebook_tab_url');
 							$message = "Estoy participando por un viaje a Alemania en el German Master Tour de Warsteiner.";
-							//$this->user->Profile->publishFacebookPost($message, $tabUrl);
+							$this->user->Profile->publishFacebookPost($message, $tabUrl);
+							
+							//Buscar al usuario en pos 24 (el desplazado)
+							$desplacedUser = sfGuardUserTable::getInstance()->getUserOnPosition(24);
+							if($desplacedUser)
+							{
+								$tabUrl = sfConfig::get('app_facebook_tab_url');
+								$message = "Te han quitado del avión, vuelve a participar por un lugar al viaje a Alemania en el German Master Tour de Warsteiner.";
+								$desplacedUser->Profile->publishFacebookPost($message, $tabUrl);
+							}
 							
 							//$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');
 							$this->redirect('congratulations');

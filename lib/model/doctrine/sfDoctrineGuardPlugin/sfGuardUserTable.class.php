@@ -272,4 +272,18 @@ class sfGuardUserTable extends PluginsfGuardUserTable
     {
     	return $this->getUsersWithTwitterQuery($limit)->execute();
     }
+    
+    public function getUserOnPositionQuery($position)
+    {
+    	$q = $this->createQuery('u');
+    	$q->leftJoin('u.Profile p');
+    	$q->andWhere('p.position = ?', $position);    	 
+    
+    	return $q;
+    }
+    
+    public function getUserOnPosition($position)
+    {
+    	return $this->getUserOnPositionQuery($position)->fetchOne();
+    }
 }
