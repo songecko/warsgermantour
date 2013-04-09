@@ -14,6 +14,31 @@ class Winner extends BaseWinner
 {
 	public function getFullname()
 	{
-		$this->user->getFullname();
+		return $this->user->getFullname();
+	}
+	
+	public function getClassPrice()
+	{
+		switch ($this->price)
+		{
+			case "Heladera":
+				return "heladera";
+				break;
+			case "Giftpacks":
+				return "sixpack";
+				break;
+			case "Pasajes":
+				return "tickets";
+				break;
+			case "Remeras":
+				return "remera";
+				break;
+			case "Remeras + Giftpack":
+				return "remsix";
+				break;
+			default:
+				return "";
+				break;
+		}
 	}
 }

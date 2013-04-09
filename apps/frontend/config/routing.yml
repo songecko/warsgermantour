@@ -37,6 +37,9 @@ como:
   url:    /como
   param:  { module: home, action: como }
   
+congratulations:
+  url:    /felicitaciones
+  param:  { module: home, action: congratulations }
 # default rules
 homepage:
   url:    /

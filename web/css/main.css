@@ -117,6 +117,14 @@ ul.ranking li .posicion { font-size:35px;font-family: 'Lato', sans-serif; color:
 ul.ranking li.win .info { color:#fff;}
 ul.ranking li.win .info span { display:block; padding-top:10px;  font-size:14px; color:#ccc}
 
+ul.ranking li .premio span { float:right; margin:15px 0 0 0}
+ul.ranking li .premio span.heladera { background:url(../images/iconos/heladeras.jpg) no-repeat; width:36px; height:35px; display:block;}
+ul.ranking li .premio span.remera { background:url(../images/iconos/remeras.jpg) no-repeat; width:36px; height:35px; display:block; }
+ul.ranking li .premio span.remsix { background: url(../images/iconos/remera-sixpack.jpg) no-repeat; width:36px; height:35px; display:block;}
+ul.ranking li .premio span.sixpack { background: url(../images/iconos/sixpack.jpg) no-repeat; width:36px; height:35px; display:block;}
+ul.ranking li .premio span.tickets { background: url(../images/iconos/tickets.jpg) no-repeat; width:36px; height:35px; display:block;}
+
+
 /********************************************  MOVIL
 ***************************************************/
 
@@ -177,4 +185,5 @@ ul.ranking li .info span { display:block; padding-top:3px;  font-size:11px; colo
 ul.ranking li .posicion { font-size:16px;font-family: 'Lato', sans-serif; color:#000; font-weight:900; float:right; padding:0px 10px 0 0 ; color:#fff; text-shadow:0 -1px 0 #999}
 ul.ranking li.win .info span { display:block; padding-top:10px;  font-size:14px; color:#ccc}
 
+ul.ranking li .premio span { float:right; margin:0 0 0 0}
 }

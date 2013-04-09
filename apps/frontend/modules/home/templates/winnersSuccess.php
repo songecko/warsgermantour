@@ -13,7 +13,7 @@
         		<li class="win clearfix">
 	          		<div class="avatar"><img src="<?php echo $winner->user->getSocialPicture() ?>" /></div>
 	          		<div class="info"><?php echo $winner->user->getFullname() ?> <span>Lotes cargados: <em><?php echo $winner->user->Profile->getPoints() ?></em></span></div>
-	          		<div class="posicion"><?php echo $i ?></div>
+	          		<div class="premio"><span class="<?php echo $winner->getClassPrice() ?>"></span></div>
         		</li>
         		<?php endforeach; ?>
       		</ul>

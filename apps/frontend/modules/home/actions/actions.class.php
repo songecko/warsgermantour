@@ -92,6 +92,10 @@ class homeActions extends sfActions
 	{
 	}
 	
+	public function executeCongratulations(sfWebRequest $request)
+	{
+	}
+	
 	public function executeFullVersion(sfWebRequest $request)
 	{
 		$this->getUser()->setAttribute('fullversion', true);	
@@ -143,9 +147,11 @@ class homeActions extends sfActions
 							//Send facebook Post
 							$tabUrl = sfConfig::get('app_facebook_tab_url');
 							$message = "Estoy participando por un viaje a Alemania en el German Master Tour de Warsteiner.";
-							$this->user->Profile->publishFacebookPost($message, $tabUrl);
+							//$this->user->Profile->publishFacebookPost($message, $tabUrl);
 							
-							$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');								
+							//$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');
+							$this->redirect('congratulations');
+							
 						} catch (Doctrine_Exception $e)
 						{
 							$this->getUser()->setFlash('error', 'Hubo un problema al cargar el c&oacute;digo, vuelva a intentarlo mas tarde.');
