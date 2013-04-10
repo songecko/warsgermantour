@@ -49,7 +49,7 @@ class sfGuardUserProfile extends BasesfGuardUserProfile
 	{
 		if(!$this->facebookProfile)
 		{
-			$facebook = sfFacebook::getFacebookClient();;
+			$facebook = sfFacebook::getFacebookClient();
 	
 			try {
 				$this->facebookProfile = $facebook->api('/'.$this->getFacebookUid().'?fields=id,name,picture');

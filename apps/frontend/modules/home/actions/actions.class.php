@@ -75,6 +75,13 @@ class homeActions extends sfActions
 		}*/
 	}
 		
+	public function executeAirplaneUsers(sfWebRequest $request)
+	{
+		$airplaneUsers = sfGuardUserTable::getInstance()->getUsersOrderByPosition(23);
+		
+		return $this->renderPartial('home/airplaneUsers', array('airplaneUsers' => $airplaneUsers));
+	}
+	
 	public function executeWinners(sfWebRequest $request)
 	{
 		$this->winners = WinnerTable::getInstance()->getWinnersOrderByDate();
@@ -155,7 +162,9 @@ class homeActions extends sfActions
 							{
 								$tabUrl = sfConfig::get('app_facebook_tab_url');
 								$message = "Te han quitado del avión, vuelve a participar por un lugar al viaje a Alemania en el German Master Tour de Warsteiner.";
-								$desplacedUser->Profile->publishFacebookPost($message, $tabUrl);
+								
+								$desplacedUser->setFacebookNotification($tabUrl, $message);
+								//$desplacedUser->Profile->publishFacebookPost($message, $tabUrl);
 							}
 							
 							//$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');

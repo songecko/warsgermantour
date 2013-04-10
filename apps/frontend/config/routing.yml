@@ -41,6 +41,10 @@ congratulations:
   url:    /felicitaciones
   param:  { module: home, action: congratulations }
 
+airplane_users:
+  url:    /airplane-users
+  param:  { module: home, action: airplaneUsers }
+  
 # default rules
 homepage:
   url:    /

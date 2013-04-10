@@ -95,7 +95,7 @@ class BasesfFacebookConnectAuthActions extends sfActions
 			$facebook = sfFacebook::getFacebookClient();
 					
 			$this->facebookConnectUrl = $facebook->getLoginUrl(array(
-				'scope' => 'email, publish_actions'
+				'scope' => 'email, publish_actions, manage_notifications'
 			));
 							
 			return sfView::SUCCESS;

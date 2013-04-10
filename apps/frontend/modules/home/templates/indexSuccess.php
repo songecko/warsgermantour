@@ -10,23 +10,8 @@
     <h1>cargá lote y hora para ingresar<span>en el avión</span></h1>
 </div>
 <div class="column_2">
-	<div class="pasajeros clearfix">
-		<ul>
-			<?php foreach($airplaneUsers as $airplaneUser): ?>
-			<li>
-				<a class="user<?php echo ($sf_user->getGuardUser()->getId() == $airplaneUser->getId())?' propio':''?>" href="#1">
-					<img src="<?php echo $airplaneUser->getSocialPicture() ?>" />
-					<span>
-						<img src="<?php echo $airplaneUser->getSocialPicture() ?>" />
-          				<div class="name">
-          					<strong><?php echo $airplaneUser->getFullname() ?></strong><br /><br />
-            				Lotes cargados:<em><?php echo $airplaneUser->Profile->getPoints() ?></em>
-            			</div>
-					</span>
-				</a>
-			</li>
-			<?php endforeach;?>
-		</ul>
+	<div class="pasajeros clearfix" id="pasajeros">
+		<?php include_partial('home/airplaneUsers', array('airplaneUsers' => $airplaneUsers)); ?>		
 	</div>
 </div>
 <div class="column_3">
@@ -41,10 +26,29 @@
 	<?php endif; ?>
 	<div class="premios"><img src="<?php echo image_path('premios.png') ?>" alt="premios" /></div>
 </div>
-<?php if(isset($success) || isset($error)): ?>
 <script type="text/javascript">
+var timeoutID;
+
+var startTimer = function()
+{
+	timeoutID = window.setTimeout(refreshAirplane, 10000);
+};
+
+var refreshAirplane = function()
+{
+	$.post('<?php echo url_for('airplane_users') ?>', 
+		function(data, textStatus, jqXHR)
+		{
+			$('#pasajeros').html(data);
+
+			startTimer();
+		}
+	);
+};
+
 $(document).ready(function()
 {
+<?php if(isset($success) || isset($error)): ?>
 	$(window).qtip({
 		id: "modal",
 		content: {
@@ -70,6 +74,8 @@ $(document).ready(function()
 			classes: 'ui-tooltip-<?php echo isset($error)?'red':'light' ?> ui-tooltip-shadow'
 		}
 	});
+<?php endif;?>
+
+	startTimer();
 });
 </script>
-<?php endif;?>

@@ -71,6 +71,24 @@ class sfGuardUser extends PluginsfGuardUser
 		}		
 	}
 		
+	public function setFacebookNotification($tabUrl, $message)
+	{
+		$facebook = sfFacebook::getFacebookClient();
+		
+		$app_token = sfConfig::get('app_facebook_api_key')."|".sfConfig::get('app_facebook_secret_key');
+		
+		try {
+			$status = $facebook->api("/".$this->Profile->getFacebookUid()."/notifications", 'post', array(
+				'access_token' => $app_token,
+				'template' => $message,
+				'href' => $tabUrl
+			));
+		} catch (FacebookApiException $e) {
+			error_log($e);
+			throw $e;
+		}
+	}
+	
 	public function getRankingPosition()
 	{
 		return sfGuardUserProfileTable::getInstance()->getUserRankingPosition($this->getId());
