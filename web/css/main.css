@@ -13,8 +13,8 @@ body { font-family:Arial, Helvetica, sans-serif; cursor:default;}
 .wrap { width:830px; margin:0px auto;}
 .column_1 { width:100%; display:block;}
 .column_2 { width:350px; display:block; float:left;}
-.column_3 { width:463px; display:block; float:right;}
-.column_4 { width:470px; display:block; float:right; margin-right:30px;}
+.column_3 { width:459px; display:block; float:right;}
+.column_4 { width:520px; display:block; float:right; margin-right:30px;}
 
 h1, h2 , h3 , h4 {font-family: 'Lato', sans-serif;}
 p { padding-bottom:20px;}
@@ -26,52 +26,50 @@ ul.navy li a{ position:relative; float:left; width:50%; display:block; text-alig
 
 /**** HOME facebook */
 
-#intro .wrap { background:#666666 url(../images/bg01.jpg) no-repeat bottom center; height:1032px;}
-#intro h1 { font-weight:900; text-transform:uppercase; font-size:22px; text-align:center; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:35px; margin-bottom:10px;}
-#intro h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:45px;}
-#intro .logo { text-align:center; padding:40px 0 25px 0;}
-#intro .premios { text-align:center;}
+#intro .wrap { background:#666666 url(../images/bg01.jpg) no-repeat bottom center; height:699px;}
+#intro h1 { font-weight:900; text-transform:uppercase; font-size:18px; text-align:center; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:26px; margin-bottom:10px;}
+#intro h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:24px;}
+#intro .logo { text-align:center; padding:26px 0 20px 0;}
+#intro .pasos { position: absolute; float: left; margin:0 0 0 550px;}
 a.btn_bases { font-family: 'Lato', sans-serif;display:block; font-weight:900; text-transform:uppercase; font-size:11px; color:#606060; background:#fff; text-decoration:none; padding:10px 15px; width:180px; margin:0px auto;}
-a.btn_participar { background:url(../images/btn_participa.png) no-repeat top; width:263px; height:72px; display:block; text-indent:-9999px; margin:25px 0 0 400px }
-a.btn_participar:hover { background-position:bottom;}
+a.btn_participar { position:absolute; float:left; margin:260px 0 0 215px; }
 
 
 /**** REGISTRO facebook */
 
-#registro .wrap { background:#a0a0a0 url(../images/bg02.jpg) no-repeat bottom center; height:981px;}
+#registro .wrap { background:#a0a0a0 url(../images/bg02.jpg) no-repeat bottom center; height:699px;}
 #registro .column_1 { width:500px; float:right;}
-#registro h1 { font-weight:900; text-transform:uppercase; font-size:22px; text-align:left; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:35px; margin-bottom:25px;}
-#registro h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:35px;}
-#registro .logo { text-align:center; padding:40px 0;}
+#registro h1 { font-weight:900; text-transform:uppercase; font-size:22px; text-align:left; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:35px; margin-bottom:10px;}
+#registro h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:23px;}
+#registro .logo { text-align:left; padding:30px 0;}
 #registro .logo img { width:300px;}
-#registro .contenido p {font-family: 'Lato', sans-serif; font-weight:600; line-height:22px; font-size:16px;}
-#registro .contenido p strong { font-weight:900;line-height:22px; font-size:18px;}
+#registro .contenido p {font-family: 'Lato', sans-serif; font-weight:600; line-height:18px; font-size:12px;}
+#registro .contenido p strong { font-weight:900;font-size:14px;}
 
 #registro form { display:block; padding:20px 0 0 120px;}
-#registro form label { display:block; height:40px;}
-#registro form label span { width:25%; margin-right:10px;font-family: 'Lato', sans-serif; font-weight:800; text-transform:uppercase; font-size:12px; display:block; float:left; padding-top:12px; text-align:right;}
-#registro form label input { width:65%; background: url(../images/input.gif) repeat-x; padding:8px 5px; border:solid 1px #fff; border-radius:3px; box-shadow:0 2px 10px #999; display:block; float:right;}
-#registro label.cheq { padding:5px 0 0 110px;}
-#registro label.cheq input { width:auto; padding:0; float:left;position:relative; float:left;}
-#registro label.cheq span { font-size:12px; font-weight:normal; text-transform:none; width:auto; position:relative; float:left; padding:0 0 0 10px;}
-#registro form input.btn_enviar { background:url(../images/btn_enviar.png) no-repeat top; width:119px; height:43px; display:block; text-indent:-9999px; float:right; border:0; cursor: pointer; }
+#registro form label { display:block; height:40px; width:50%; position:relative; float:left;}
+#registro form label input { width:80%; background: url(../images/input.gif) repeat-x; padding:8px 5px; border:solid 1px #fff; border-radius:3px; box-shadow:0 2px 10px #999; display:block; float:right;}
+#registro label.cheq {}
+#registro label.cheq input { width:auto; padding:0; float:left;position:relative; float:left; margin:10px 0 0 10px;}
+#registro label.cheq span { font-size:12px; font-weight:normal; text-transform:none; width:auto; position:relative; float:left; padding:10px 0 0 10px;}
+#registro form input.btn_enviar { background:url(../images/btn_enviar.png) no-repeat top; border:0; cursor:pointer; width:220px; height:62px; display:block; text-indent:-9999px; position: absolute; float:left; margin:130px 0 0 10px;}
 #registro form input.btn_enviar:hover { background-position:bottom;}
 
 
 /**** JUEGO facebook */
 
-#juego .wrap { background:#656565 url(../images/bg03.jpg) no-repeat bottom center; height:1050px;}
+#juego .wrap { background:#656565 url(../images/bg03.jpg) no-repeat bottom center; height:880px;}
 #juego .column_1 { width:500px; float:right;}
-#juego h1 { font-weight:900; text-transform:uppercase; font-size:18px; text-align:center; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:35px; margin-bottom:40px;}
+#juego h1 { font-weight:900; text-transform:uppercase; font-size:18px; text-align:center; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:35px; margin-bottom:20px;}
 #juego h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:45px;}
-#juego .logo { text-align:center; padding:40px 0;}
-#juego .logo img { width:300px;}
+#juego .logo { text-align:center; padding:20px 0;}
+#juego .logo img { width:250px;}
 #juego .premios { text-align:center;}
 
 #juego .carga { background:url(../images/carga.png) no-repeat; height:283px; margin-bottom:50px; font-size:30px; color:#fff;}
 #juego .carga form { padding:160px 0 0 160px;}
 #juego .carga form input {background:#fff url(../images/input.gif) repeat-x; padding:15px 0; border:solid 1px #fff; border-radius:3px; box-shadow:0 2px 10px #999; text-align:center;}
-#juego .carga form input.btn_cargar { background:url(../images/btn_cargar.png) no-repeat top; width:139px; height:43px; display:block; text-indent:-9999px; margin:30px 0 0 50px; border:0; cursor:pointer; }
+#juego .carga form input.btn_cargar { background:url(../images//btn_cargar.png) no-repeat top; border:0px solid; cursor:pointer; width:220px; height:56px; display:block; text-indent:-9999px; margin:10px 0 0 20px;}
 #juego .carga form input.btn_cargar:hover { background-position:bottom;}
 
 #juego .pasajeros { width:100px; margin:150px 0 0 177px;}
@@ -98,7 +96,7 @@ input.error { border:solid 1px #C00 !important; color:#C00;}
 #pop .content h2 { font-size:26px; font-weight:900; margin:40px 0 30px 0; text-transform:uppercase; color:#272727;}
 #pop .content h3 { font-size:14px; font-weight:900; margin-bottom:20px; text-transform:uppercase; color:#272727;}
 #pop .content p {font-size:12px; padding-bottom:15px;color:#7e7e7e; line-height:16px;}
-#pop .content .scroll { height:550px; overflow:scroll; overflow-x:hidden;}
+#pop .content .scroll { height:400px; overflow:scroll; overflow-x:hidden;}
 a.close { background:url(../images/close.png) no-repeat; width:58px; height:58px; display:block; position:absolute; right:-25px; margin-top:-75px; text-indent:-9999px;}
 
 #pop .content h2 span { display:block; font-size:16px; font-weight:900; color:#555;}
@@ -138,15 +136,16 @@ ul.ranking li .premio span.tickets { background: url(../images/iconos/tickets.jp
 .column_3 { width:100%; display:block; clear:both; float:none;}
 .column_4 { width:90%; margin:0px auto; float:none;}	
 
-.bases { display:none; }
+.bases { width:200px; margin:-60px auto 0 auto}
+.bases p { display:none;}
 
 /**** HOME movil */
-
+#intro .wrap {  height:850px;  background:#3a3a3a url(../images/bg01.jpg) no-repeat bottom right;}
 #intro .logo img { width:70%}
-#intro .premios img { width:95%}
+#intro .pasos { width:95%; display:block; margin:20px 0; text-align:center}
 #intro h1 { font-weight:900; text-transform:uppercase; font-size:16px; text-align:center; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:30px; margin-bottom:10px;}
 #intro h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:35px;}
-a.btn_participar { margin:30px auto 0 auto;}
+a.btn_participar { margin:400px 0 0 35px; }
 
 /**** REGISTRO movil */
 

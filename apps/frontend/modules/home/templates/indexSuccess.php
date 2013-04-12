@@ -7,7 +7,7 @@
 		<li><a href="<?php echo url_for('winners') ?>"><img src="<?php echo image_path('bullet.png') ?>" /> ganadores</a></li>
     </ul>
 	<div class="logo"><img src="<?php echo image_path('logo.png') ?>" alt="Warsteiner" /></div>
-    <h1>cargá lote y hora para ingresar<span>en el avión</span></h1>
+    <h1>cargÁ lote y hora para ingresar<span>en el aviÓn</span></h1>
 </div>
 <div class="column_2">
 	<div class="pasajeros clearfix" id="pasajeros">
