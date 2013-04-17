@@ -2,13 +2,14 @@
 <ul>
 	<?php foreach($airplaneUsers as $airplaneUser): $left--; ?>
 	<li>
-		<a class="user<?php echo ($sf_user->getGuardUser()->getId() == $airplaneUser->getId())?' propio':''?>" href="#1">
+		<a class="user<?php echo ($sf_user->getGuardUser()->getId() == $airplaneUser->getId())?' propio':''?>" href="#1" style="cursor:default;" onclick="false;">
 			<img src="<?php echo $airplaneUser->getSocialPicture() ?>" />
 			<span>
 				<img src="<?php echo $airplaneUser->getSocialPicture() ?>" />
 				<div class="name">
-					<strong><?php echo $airplaneUser->getFullname() ?></strong><br /><br />
-					Lotes cargados:<em><?php echo $airplaneUser->Profile->getPoints() ?></em>
+					<strong><?php echo $airplaneUser->getFullname() ?></strong>
+					<?php /* ?><br /><br />
+					Lotes cargados:<em><?php echo $airplaneUser->Profile->getPoints() ?></em> */?>
 				</div>
 			</span>
 		</a>

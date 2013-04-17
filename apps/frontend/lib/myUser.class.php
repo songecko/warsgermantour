@@ -5,6 +5,10 @@ class myUser extends sfGuardSecurityUser
 	public function isAuthenticated()
 	{
 		$fbUser = sfFacebook::getUser();
+		if(!$fbUser && parent::isAuthenticated())
+		{
+			$this->signOut();
+		}
 		return (parent::isAuthenticated() && $fbUser);
 	}
 	
