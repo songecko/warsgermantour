@@ -71,7 +71,7 @@ class sfGuardUser extends PluginsfGuardUser
 		}		
 	}
 		
-	public function setFacebookNotification($tabUrl, $message)
+	public function setFacebookNotification($message)
 	{
 		$facebook = sfFacebook::getFacebookClient();
 		
@@ -80,8 +80,7 @@ class sfGuardUser extends PluginsfGuardUser
 		try {
 			$status = $facebook->api("/".$this->Profile->getFacebookUid()."/notifications", 'post', array(
 				'access_token' => $app_token,
-				'template' => $message,
-				'href' => $tabUrl
+				'template' => $message
 			));
 		} catch (FacebookApiException $e) {
 			error_log($e);

@@ -28,8 +28,13 @@ class homeActions extends sfActions
 	 * @param sfRequest $request A request object
 	 */
 	public function executeIndex(sfWebRequest $request)
-	{	
+	{			
 		//$this->getUser()->signOut();die;
+		if($request->hasParameter('fb_source') && $request->getParameter('fb_source') == 'notification')
+		{
+			return $this->renderText("<script>top.location.href='".sfConfig::get('app_facebook_tab_url')."'</script>");
+		}
+		
 		$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $request->getHttpHeader('User-Agent')) && !$this->getUser()->getAttribute('fullversion', false));		
 		$isOnFacebook = $this->getUser()->isOnFacebookIframe();
 		
@@ -50,7 +55,7 @@ class homeActions extends sfActions
 		
 		//Check if the user has the profile
 		$this->redirectUnless($this->getUser()->hasProfile(), 'create_profile');
-		
+				
 		//START THE HOMEPAGE ACTION		
 		$this->airplaneUsers = sfGuardUserTable::getInstance()->getUsersOrderByPosition(23);
 		$this->isOnAirplane = false;
@@ -160,11 +165,8 @@ class homeActions extends sfActions
 							$desplacedUser = sfGuardUserTable::getInstance()->getUserOnPosition(24);
 							if($desplacedUser)
 							{
-								$tabUrl = sfConfig::get('app_facebook_tab_url');
-								$message = "Te han quitado del avión, vuelve a participar por un lugar al viaje a Alemania en el German Master Tour de Warsteiner.";
-								
-								$desplacedUser->setFacebookNotification($tabUrl, $message);
-								//$desplacedUser->Profile->publishFacebookPost($message, $tabUrl);
+								$message = "Te han quitado del avión, vuelve a participar por un lugar al viaje a Alemania en el German Master Tour de Warsteiner.";								
+								$desplacedUser->setFacebookNotification($message);
 							}
 							
 							//$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');

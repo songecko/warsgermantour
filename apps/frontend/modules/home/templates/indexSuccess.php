@@ -23,6 +23,8 @@
 			<input type="submit" class="btn_cargar" value="cargar" />
 		</form>
 	</div>
+	<?php else: ?>
+	<p>¡Ya estás dentro del avión! Si tenés otro código para cargar, guardalo para cuando seas desplazado. Así podés volver a ingresar y participar por todos los premios.</p>
 	<?php endif; ?>
 	<div class="premios"><img src="<?php echo image_path('premios.png') ?>" alt="premios" /></div>
 </div>

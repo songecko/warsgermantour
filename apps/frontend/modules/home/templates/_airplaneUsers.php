@@ -17,7 +17,7 @@
 	<?php endforeach;?>
 	<?php for($left; $left > 0; $left--): ?>
 	<li>
-		<a class="user" href="#1">
+		<a class="user" href="#1" style="cursor:default;" onclick="false;">
 			<img src="<?php echo image_path('avatar.jpg') ?>" />
 		</a>
 	</li>
