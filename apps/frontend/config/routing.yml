@@ -21,6 +21,10 @@ twitter_signin:
   url:    /twitter-signin
   param:  { module: sfGuardAuth, action: twitterSignin }
   
+pregame:
+  url:    /pregame
+  param:  { module: home, action: pregame }
+  
 prelike:
   url:    /prelike
   param:  { module: home, action: prelike }

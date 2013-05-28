@@ -1,25 +1,25 @@
-<?php $left = 23; ?>
-<ul>
-	<?php foreach($airplaneUsers as $airplaneUser): $left--; ?>
-	<li>
-		<a class="user<?php echo ($sf_user->getGuardUser()->getId() == $airplaneUser->getId())?' propio':''?>" href="#1" style="cursor:default;" onclick="false;">
-			<img src="<?php echo $airplaneUser->getSocialPicture() ?>" />
-			<span>
-				<img src="<?php echo $airplaneUser->getSocialPicture() ?>" />
-				<div class="name">
-					<strong><?php echo $airplaneUser->getFullname() ?></strong>
-					<?php /* ?><br /><br />
-					Lotes cargados:<em><?php echo $airplaneUser->Profile->getPoints() ?></em> */?>
-				</div>
-			</span>
-		</a>
-	</li>
+<!-- PASAJEROS -->
+<div class="asientos">
+	<?php $i = 1; ?>
+	<?php foreach($airplaneUsers as $user): ?>
+	<div class="participante p_<?php echo $i ?><?php echo ($sf_user->getGuardUser()->getId() == $user->getId())?' propio':''?>">
+		<img src="<?php echo $user->getSocialPicture() ?>" alt="avatar" />
+	</div>
+	<?php $i++;?>
 	<?php endforeach;?>
-	<?php for($left; $left > 0; $left--): ?>
-	<li>
-		<a class="user" href="#1" style="cursor:default;" onclick="false;">
-			<img src="<?php echo image_path('avatar.jpg') ?>" />
-		</a>
-	</li>
-	<?php endfor; ?>
-</ul>
+	<?php for($i; $i <= $totalAirplaneUsers; $i++): ?>
+    <div class="participante p_<?php echo $i ?>">
+    	<span class="belt"></span>
+    	<img src="<?php echo image_path('avatar.jpg')?>" alt="avatar" />
+    </div>
+    <?php endfor; ?>
+</div>
+
+<!-- SALIENTES -->
+<div class="salientes">
+	<?php $i = 1; ?>
+	<?php foreach($outsideUsers as $user): ?>
+	<div class="saliente"><div class="participante"><img src="<?php echo $user->getSocialPicture() ?>" alt="avatar" /></div></div>
+	<?php $i++;?>
+	<?php endforeach;?>
+</div>

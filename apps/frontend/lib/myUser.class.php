@@ -14,7 +14,7 @@ class myUser extends sfGuardSecurityUser
 	
 	public function hasProfile()
 	{
-		return ($this->getGuardUser() && $this->getGuardUser()->Profile && $this->getGuardUser()->Profile->getEmailAddress());
+		return ($this->getGuardUser() && $this->getGuardUser()->Profile && $this->getGuardUser()->Profile->getFirstName());
 	}
 	
 	public function hasTwitter()
@@ -53,6 +53,16 @@ class myUser extends sfGuardSecurityUser
 		}
 		
 		return false;
+	}
+	
+	public function isFirstTimeOnGame()
+	{
+		return $this->getAttribute('is_first_time', true);
+	}
+	
+	public function setIsFirstTimeOnGame($firstTime)
+	{
+		$this->setAttribute('is_first_time', $firstTime);
 	}
 	
 	public function getUrlAfterLogin()

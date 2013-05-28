@@ -1,33 +1,40 @@
 <?php slot('body_tag') ?>
-  <body id="juego">
+  <body class="game">
 <?php end_slot(); ?>
-<div class="column_3">
-	<ul class="navy">
-		<li><a href="<?php echo url_for('como') ?>"><img src="<?php echo image_path('bullet.png') ?>" /> como participar</a></li>
-		<li><a href="<?php echo url_for('winners') ?>"><img src="<?php echo image_path('bullet.png') ?>" /> ganadores</a></li>
-    </ul>
-	<div class="logo"><img src="<?php echo image_path('logo.png') ?>" alt="Warsteiner" /></div>
-    <h1>cargÁ lote y hora para ingresar<span>en el aviÓn</span></h1>
+
+<!-- PARTICIPANTES -->
+<div id="participantes">	
+	<?php include_partial('home/airplaneUsers', array(
+			'airplaneUsers' => $airplaneUsers,
+			'outsideUsers' => $outsideUsers, 
+			'totalAirplaneUsers' => $totalAirplaneUsers,
+			'totalOutsideUsers' => $totalOutsideUsers
+		)); 
+	?>	
 </div>
-<div class="column_2">
-	<div class="pasajeros clearfix" id="pasajeros">
-		<?php include_partial('home/airplaneUsers', array('airplaneUsers' => $airplaneUsers)); ?>		
+  
+<!-- CARGAR CODIGOS -->
+<div class="cargar">
+	<form method="post" action="<?php echo url_for('send_promo_code');?>">
+		<?php echo $form['_csrf_token']->render() ?>
+		<?php echo $form['code']->render(array('class' => $form['code']->hasError()?'error':'')) ?>
+		<input type="submit" class="btn_ingresar" value="Ingresar" />
+	</form>
+</div>
+  
+<!-- TIPS -->
+<div class="tips">
+	<div class="logo"><img src="<?php echo image_path('loguitp.png')?>" alt="warsteiner" /></div>
+    <div class="burbuja">
+		<div class="top"></div>
+		<div class="cont">Ingresá más códigos de lote y hora para mantenerte en el avión!!</div>
+		<div class="bottom"></div>
 	</div>
 </div>
-<div class="column_3">
-	<?php if(!$isOnAirplane): ?>
-	<div class="carga">
-		<form method="post" action="<?php echo url_for('send_promo_code');?>">
-			<?php echo $form['_csrf_token']->render() ?>
-			<?php echo $form['code']->render(array('class' => $form['code']->hasError()?'error':'')) ?>
-			<input type="submit" class="btn_cargar" value="cargar" />
-		</form>
-	</div>
-	<?php else: ?>
-	<p>¡Ya estás dentro del avión! Si tenés otro código para cargar, guardalo para cuando seas desplazado. Así podés volver a ingresar y participar por todos los premios.</p>
-	<?php endif; ?>
-	<div class="premios"><img src="<?php echo image_path('premios.png') ?>" alt="premios" /></div>
-</div>
+  
+<!-- COMPARTIR -->
+<div class="share">social buttons</div>
+
 <script type="text/javascript">
 var timeoutID;
 
@@ -41,7 +48,7 @@ var refreshAirplane = function()
 	$.post('<?php echo url_for('airplane_users') ?>', 
 		function(data, textStatus, jqXHR)
 		{
-			$('#pasajeros').html(data);
+			$('#participantes').html(data);
 
 			startTimer();
 		}
@@ -50,34 +57,19 @@ var refreshAirplane = function()
 
 $(document).ready(function()
 {
-<?php if(isset($success) || isset($error)): ?>
-	$(window).qtip({
-		id: "modal",
-		content: {
-			text:  '<?php echo html_entity_decode(isset($success)?$success:$error) ?>',
-			title: {
-				text: 'Warsteiner - German Master Tour',
-				button: true
-			}
-		},
-		position: {
-			my: 'center',  // Position my top left...
-			at: 'center', // at the bottom right of...
-			target: $(window) // my target
-		},
-		show: {
-			event: false, // Don't specify a show event...
-			solo: true,
-			ready: true, // ... but show the tooltip when ready
-			modal: true
-		},
-		hide: false, // Don't specify a hide event either!
-		style: {
-			classes: 'ui-tooltip-<?php echo isset($error)?'red':'light' ?> ui-tooltip-shadow'
-		}
+	$('.popup a.btn_close').click(function(e){
+		$(this).parent('.popup').hide();
+		e.preventDefault();
 	});
-<?php endif;?>
 
+	<?php if(isset($success)): ?>
+	$('#success_popup').show();
+	<?php endif; ?>
+	
+	<?php if(isset($error)): ?>
+	$('#error_popup').show();
+	<?php endif; ?>
+	
 	startTimer();
 });
 </script>

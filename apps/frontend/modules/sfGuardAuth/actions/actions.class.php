@@ -93,27 +93,53 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
 	public function executeCreateProfile(sfWebRequest $request)
 	{
 		$user = $this->getUser();
-		$this->redirectUnless($user->isAuthenticated(), 'homepage');
-		
-		if($user->hasProfile())
+		//$this->redirectUnless($user->isAuthenticated() && $user->hasProfile(), 'homepage');
+			
+		if($user->isAuthenticated())
 		{
-			$this->redirect($this->generateUrl('homepage'));
+			$this->form = new RegisterForm($user->getGuardUser()->Profile);
+		}else {
+			$this->form = new RegisterForm();
 		}
-		
-		$this->form = new RegisterForm($user->getGuardUser()->Profile);
-		
-		if($request->isMethod('post'))
+			
+		if($request->isMethod('post') || $user->isAuthenticated())
 		{
-			$this->form->bind($request->getParameter($this->form->getName()));
+			if($user->isAuthenticated() && $user->hasAttribute('form_values'))
+			{
+				$formValues = $user->getAttribute('form_values', array());
+				$formValues['user_id'] = $user->getGuardUser()->getId();
+ 			}else 
+			{
+				$formValues = $request->getParameter($this->form->getName());
+				$user->setAttribute('form_values', $formValues);
+			}
+			
+			$this->form->bind($formValues);
+			
 			if($this->form->isValid())
 			{
 				$values = $this->form->getValues();
 				if(isset($values['accept_bases']) && $values['accept_bases'] === true)
 				{
+					$user->setAttribute('form_values', $formValues);
+					
+					if(!$user->isAuthenticated())
+					{
+						$facebook = sfFacebook::getFacebookClient();							
+						$facebookConnectUrl = $facebook->getLoginUrl(array(
+								'redirect_uri' => $this->generateUrl('facebook_signin', array(), true),
+								'scope' => 'email, publish_actions, manage_notifications'
+						));
+						
+						return $this->renderText('<script type="text/javascript">top.location.href = "'.$facebookConnectUrl.'";</script>');						
+					}			
+			
 					try 
 					{		
 						if($this->form->save())
 						{
+							$user->getAttributeHolder()->remove('form_values');
+							
 							return $this->redirect($this->generateUrl('homepage'));
 						}					
 					}catch (sfValidatorError $exception)

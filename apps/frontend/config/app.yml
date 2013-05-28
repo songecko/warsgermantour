@@ -6,6 +6,10 @@ all:
   points_for_tweet:     10
   points_for_code:      100
 
+  game:
+    total_airplane_users: 31
+    total_outside_users: 3
+    
   sf_guard_plugin:
     routes_register:    true
     

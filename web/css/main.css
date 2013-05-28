@@ -9,180 +9,101 @@ body { font-family:Arial, Helvetica, sans-serif; cursor:default;}
 /*****************************************  FACEBOOK
 ***************************************************/
 
+.wrap { max-width:830px; margin:0px auto;}
+body.registro .wrap { background:url(../images/bg_registro.jpg) no-repeat top center; min-height:647px;}
+body.pregame .wrap { background:url(../images/pregame.jpg) no-repeat top center; min-height:983px;}
+body.game .wrap { background:url(../images/bg_avion.jpg) no-repeat top center; min-height:983px;}
 
-.wrap { width:830px; margin:0px auto;}
-.column_1 { width:100%; display:block;}
-.column_2 { width:350px; display:block; float:left;}
-.column_3 { width:459px; display:block; float:right;}
-.column_4 { width:520px; display:block; float:right; margin-right:30px;}
+.footer {max-width:790px; margin:0px auto; background:#cfcfcf; padding:20px 20px 0 20px; text-align:center; overflow:hidden; }
+.footer p { font-size:9px; line-height:12px; padding-bottom:20px;}
 
-h1, h2 , h3 , h4 {font-family: 'Lato', sans-serif;}
-p { padding-bottom:20px;}
+.registro form { width:230px; position:absolute; float:left; margin:280px 0 0 400px;}
+.registro form label { display:block; margin-bottom:10px;}
+.registro form label input { width:95%; background:#fff url(../images/input_registro.gif) repeat-x top;border:solid 1px #fff; border-radius:3px; padding:10px 5px; box-shadow:0 5px 10px #222;}
+.registro form label.bases { margin-bottom:20px;}
+.registro form label.bases input { width:auto; padding:0 !important; border:none !important;}
+.registro form label.bases a { font-size:11px; color:#fff;}
+.registro form .btn_registrar { background:url(../images/btn_enviar.png) no-repeat; width:175px; height:51px; text-indent:-9999px; display:block; border: none; cursor: pointer;}
 
-.bases { font-size:9px; text-align:center; padding:30px; line-height:12px; width:770px; margin:-118px auto 0 auto }
+.pregame a.btn_continuar { float:right; margin:40px 10px 0 0;}
+.pregame a.btn_transparent { width:100%; height:983px; display:block;}
 
-ul.navy { display:block; width:80%; margin:0px auto 40px auto;}
-ul.navy li a{ position:relative; float:left; width:50%; display:block; text-align:center; padding:20px 0;font-family: 'Lato', sans-serif; color:#fff; text-transform:uppercase; font-weight:900; text-decoration:none; font-size:14px; }
+.game .cargar { background:url(../images/bg_carga.png) no-repeat top; width:370px; height:265px; float:left; position: absolute; margin:230px 0 0 0}
+.game .cargar form { position:absolute; float:left; margin:130px 0 0 130px}
+.game .cargar form label { margin-right:5px; font-size:18px; color:#fff;}
+.game .cargar form input {background:#fff url(../images/input_registro.gif) repeat-x top;border:solid 1px #fff; border-radius:3px; padding:8px 0; box-shadow:0 5px 10px #222; text-align:center}
+.game .cargar form .btn_ingresar { background:url(../images/btn_ingresar.png) no-repeat top; width:119px; height:30px; display:block; text-indent:-9999px; margin:10px 0 0 75px; border: none; cursor: pointer;}
 
-/**** HOME facebook */
+.game .tips { position:absolute; float:left; margin:500px 0 0 25px; width:290px;}
+.game .tips .logo { float:left;}
+.game .tips .burbuja { width:209px; float:right;}
+.game .tips .burbuja .top { background:url(../images/tips_01.png); height:33px;}
+.game .tips .burbuja .cont { background:url(../images/tips_02.png); height:33px; font-size:11px; font-family:Tahoma, Geneva, sans-serif; color:#333; padding:0 5px 0 20px; line-height:14px;}
+.game .tips .burbuja .bottom { background:url(../images/tips_03.png); height:12px;}
 
-#intro .wrap { background:#666666 url(../images/bg01.jpg) no-repeat bottom center; height:699px;}
-#intro h1 { font-weight:900; text-transform:uppercase; font-size:18px; text-align:center; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:26px; margin-bottom:10px;}
-#intro h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:24px;}
-#intro .logo { text-align:center; padding:26px 0 20px 0;}
-#intro .pasos { position: absolute; float: left; margin:0 0 0 550px;}
-a.btn_bases { font-family: 'Lato', sans-serif;display:block; font-weight:900; text-transform:uppercase; font-size:11px; color:#606060; background:#fff; text-decoration:none; padding:10px 15px; width:180px; margin:0px auto;}
-a.btn_participar { position:absolute; float:left; margin:260px 0 0 215px; }
+.game .share { position:absolute; float:left; margin:600px 0 0 25px; background:url(../images/share.png) no-repeat; width:210px; height:107px; padding:15px 0 0 105px;}
 
-
-/**** REGISTRO facebook */
-
-#registro .wrap { background:#a0a0a0 url(../images/bg02.jpg) no-repeat bottom center; height:699px;}
-#registro .column_1 { width:500px; float:right;}
-#registro h1 { font-weight:900; text-transform:uppercase; font-size:22px; text-align:left; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:35px; margin-bottom:10px;}
-#registro h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:23px;}
-#registro .logo { text-align:left; padding:30px 0;}
-#registro .logo img { width:300px;}
-#registro .contenido p {font-family: 'Lato', sans-serif; font-weight:600; line-height:18px; font-size:12px;}
-#registro .contenido p strong { font-weight:900;font-size:14px;}
-
-#registro form { display:block; padding:20px 0 0 120px;}
-#registro form label { display:block; height:40px; width:50%; position:relative; float:left;}
-#registro form label input { width:80%; background: url(../images/input.gif) repeat-x; padding:8px 5px; border:solid 1px #fff; border-radius:3px; box-shadow:0 2px 10px #999; display:block; float:right;}
-#registro label.cheq {}
-#registro label.cheq input { width:auto; padding:0; float:left;position:relative; float:left; margin:10px 0 0 10px;}
-#registro label.cheq span { font-size:12px; font-weight:normal; text-transform:none; width:auto; position:relative; float:left; padding:10px 0 0 10px;}
-#registro form input.btn_enviar { background:url(../images/btn_enviar.png) no-repeat top; border:0; cursor:pointer; width:220px; height:62px; display:block; text-indent:-9999px; position: absolute; float:left; margin:130px 0 0 10px;}
-#registro form input.btn_enviar:hover { background-position:bottom;}
+.game .asientos { width:290px; position:absolute; float: right; margin:200px 0 0 422px;}
+.game .asientos .participante { width:38px; height:38px; overflow:hidden; border-radius:3px;position:absolute; float:left;}
+.game .asientos .participante img { width:100%; }
 
 
-/**** JUEGO facebook */
+.game .asientos .p_1 { margin:67px 0 0 78px;}
 
-#juego .wrap { background:#656565 url(../images/bg03.jpg) no-repeat bottom center; height:880px;}
-#juego .column_1 { width:500px; float:right;}
-#juego h1 { font-weight:900; text-transform:uppercase; font-size:18px; text-align:center; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:35px; margin-bottom:20px;}
-#juego h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:45px;}
-#juego .logo { text-align:center; padding:20px 0;}
-#juego .logo img { width:250px;}
-#juego .premios { text-align:center;}
+.game .asientos .p_2 { margin:169px 0 0 29px;}
+.game .asientos .p_3 { margin:169px 0 0 128px;}
 
-#juego .carga { background:url(../images/carga.png) no-repeat; height:283px; margin-bottom:50px; font-size:30px; color:#fff;}
-#juego .carga form { padding:160px 0 0 160px;}
-#juego .carga form input {background:#fff url(../images/input.gif) repeat-x; padding:15px 0; border:solid 1px #fff; border-radius:3px; box-shadow:0 2px 10px #999; text-align:center;}
-#juego .carga form input.btn_cargar { background:url(../images//btn_cargar.png) no-repeat top; border:0px solid; cursor:pointer; width:220px; height:56px; display:block; text-indent:-9999px; margin:10px 0 0 20px;}
-#juego .carga form input.btn_cargar:hover { background-position:bottom;}
+.game .asientos .p_4 { margin:234px 0 0 -24px;}
+.game .asientos .p_5 { margin:234px 0 0 29px;}
+.game .asientos .p_6 { margin:234px 0 0 128px;}
+.game .asientos .p_7 { margin:234px 0 0 180px;}
 
-#juego .pasajeros { width:100px; margin:150px 0 0 177px;}
-#juego .pasajeros li a.user { width:35px; height:35px; display:block; position:relative; float:left; margin:5px; border:solid 1px #000; box-shadow:0 1px 3px #999;}
-#juego .pasajeros li:first-child  a.user{ margin:5px 29px;}
-#juego .pasajeros li a.user img { width:100%;}
-#juego .pasajeros li a span { display:none;}
-#juego .pasajeros li a:hover {border:solid 1px #fff;}
-#juego .pasajeros li a:hover span { background:url(../images/pop_up.png) no-repeat; width:193px; height:74px; display:block; z-index:100; position:absolute; float:left; margin:-130px 0 0 -95px; padding:15px;}
-#juego .pasajeros li a:hover span img { float:left; width:64px !important; height:64px; margin-right:10px;}
-#juego .pasajeros li a:hover span .name {font-family: 'Lato', sans-serif; color:#666; font-size:11px; text-decoration:none;}
-#juego .pasajeros li a:hover span .name strong {font-family: 'Lato', sans-serif; color:#000; font-weight:900; text-decoration:none; margin-bottom:10px; font-size:15px}
-#juego .pasajeros li a:hover span .name em { color:#da2c2c}
-.propio { border:solid 1px #FC0 !important;  box-shadow:0 1px 20px #000 !important;}
+.game .asientos .p_8 { margin:337px 0 0 -24px;}
+.game .asientos .p_9 { margin:337px 0 0 29px;}
+.game .asientos .p_10 { margin:337px 0 0 128px;}
+.game .asientos .p_11 { margin:337px 0 0 180px;}
 
-input.error { border:solid 1px #C00 !important; color:#C00;}
+.game .asientos .p_12 { margin:405px 0 0 -24px;}
+.game .asientos .p_13 { margin:405px 0 0 29px;}
+.game .asientos .p_14 { margin:405px 0 0 128px;}
+.game .asientos .p_15 { margin:405px 0 0 180px;}
 
+.game .asientos .p_16 { margin:474px 0 0 -24px;}
+.game .asientos .p_17 { margin:474px 0 0 29px;}
+.game .asientos .p_18 { margin:474px 0 0 128px;}
+.game .asientos .p_19 { margin:474px 0 0 180px;}
 
+.game .asientos .p_20 { margin:542px 0 0 -24px;}
+.game .asientos .p_21 { margin:542px 0 0 29px;}
+.game .asientos .p_22 { margin:542px 0 0 128px;}
+.game .asientos .p_23 { margin:542px 0 0 180px;}
 
-/**** POP UP facebook */
+.game .asientos .p_24 { margin:606px 0 0 -24px;}
+.game .asientos .p_25 { margin:606px 0 0 29px;}
+.game .asientos .p_26 { margin:606px 0 0 128px;}
+.game .asientos .p_27 { margin:606px 0 0 180px;}
 
-#pop .wrap { background:#373737; padding:70px 40px; width:750px;}
-#pop .content { background:#e5e5e5 url(../images/pop.jpg) no-repeat; padding:40px 90px;box-shadow:3px 3px 10px #000; position:relative;}
-#pop .content h2 { font-size:26px; font-weight:900; margin:40px 0 30px 0; text-transform:uppercase; color:#272727;}
-#pop .content h3 { font-size:14px; font-weight:900; margin-bottom:20px; text-transform:uppercase; color:#272727;}
-#pop .content p {font-size:12px; padding-bottom:15px;color:#7e7e7e; line-height:16px;}
-#pop .content .scroll { height:400px; overflow:scroll; overflow-x:hidden;}
-a.close { background:url(../images/close.png) no-repeat; width:58px; height:58px; display:block; position:absolute; right:-25px; margin-top:-75px; text-indent:-9999px;}
+.game .asientos .p_28 { margin:673px 0 0 -24px;}
+.game .asientos .p_29 { margin:673px 0 0 29px;}
+.game .asientos .p_30 { margin:673px 0 0 128px;}
+.game .asientos .p_31 { margin:673px 0 0 180px;}
 
-#pop .content h2 span { display:block; font-size:16px; font-weight:900; color:#555;}
+.game .asientos span.belt { background:url(../images/belt.png) no-repeat top; width:51px; height:39px; position:absolute; float:left; margin:0 0 0 -6px}
 
-ul.ranking {}
-ul.ranking li { display:block; width:95%; padding:10px; background:#fff; border:solid 1px #fff; box-shadow:2px 5px 10px #999; margin-bottom:10px;background: #e0e0e0;background: -moz-linear-gradient(top, #e0e0e0 0%, #bcbcbc 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e0e0), color-stop(100%,#bcbcbc));
-background: -webkit-linear-gradient(top, #e0e0e0 0%,#bcbcbc 100%);background: -o-linear-gradient(top, #e0e0e0 0%,#bcbcbc 100%);background: -ms-linear-gradient(top, #e0e0e0 0%,#bcbcbc 100%);background: linear-gradient(to bottom, #e0e0e0 0%,#bcbcbc 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#bcbcbc',GradientType=0 ); }
-ul.ranking li.win {display:block; width:95%; padding:10px; background:#fff; border:solid 1px #3f3f3f; box-shadow:2px 5px 10px #999; margin-bottom:10px;background: #696969;
-background: -moz-linear-gradient(top,  #696969 0%, #3b3b3b 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#696969), color-stop(100%,#3b3b3b));background: -webkit-linear-gradient(top,  #696969 0%,#3b3b3b 100%);background: -o-linear-gradient(top,  #696969 0%,#3b3b3b 100%);background: -ms-linear-gradient(top,  #696969 0%,#3b3b3b 100%);background: linear-gradient(to bottom,  #696969 0%,#3b3b3b 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#696969', endColorstr='#3b3b3b',GradientType=0 );}
-ul.ranking li .avatar { width:64px; float:left;}
-ul.ranking li .avatar img { width:100%; border:solid 1px #000;}
-ul.ranking li .info { width:400px; position:relative; float:left; margin-left:20px; font-size:24px;font-family: 'Lato', sans-serif; color:#000; font-weight:900;}
-ul.ranking li .info span { display:block; padding-top:10px;  font-size:14px; color:#666}
-ul.ranking li .info span em { color:#da2c2c}
-ul.ranking li .posicion { font-size:35px;font-family: 'Lato', sans-serif; color:#000; font-weight:900; float:right; padding:15px 15px 0 0 ; color:#fff; text-shadow:0 -1px 0 #999}
-ul.ranking li.win .info { color:#fff;}
-ul.ranking li.win .info span { display:block; padding-top:10px;  font-size:14px; color:#ccc}
+.game .salientes { width:220px; position:absolute; float:left; margin:830px 0 0 170px}
+.game .salientes .saliente { background:url(../images/paracaidas.png) no-repeat; width:51px; height:63px; padding:63px 0 0 5px; position:relative; float:left; margin-right:5px;}
+.game .salientes .participante { width:38px; height:38px; overflow:hidden; border-radius:3px;position:absolute; float:left;}
+.game .salientes .participante img { width:100%; }
 
-ul.ranking li .premio span { float:right; margin:15px 0 0 0}
-ul.ranking li .premio span.heladera { background:url(../images/iconos/heladeras.jpg) no-repeat; width:36px; height:35px; display:block;}
-ul.ranking li .premio span.remera { background:url(../images/iconos/remeras.jpg) no-repeat; width:36px; height:35px; display:block; }
-ul.ranking li .premio span.remsix { background: url(../images/iconos/remera-sixpack.jpg) no-repeat; width:36px; height:35px; display:block;}
-ul.ranking li .premio span.sixpack { background: url(../images/iconos/sixpack.jpg) no-repeat; width:36px; height:35px; display:block;}
-ul.ranking li .premio span.tickets { background: url(../images/iconos/tickets.jpg) no-repeat; width:36px; height:35px; display:block;}
+.overlay { position:absolute; float:left; width:100%; height:100%; background:url(../images/overlay.png); z-index:1000;}
+.overlay .cont { padding:30px; background:#e8e8e8; width:500px; margin:80px auto; box-shadow:0 5px 10px #111;}
+.overlay .cont a.btn_close { background:url(../images/close.png) no-repeat; width:58px; height:58px; display:block; text-indent:-9999px; position: absolute; float:left; margin:-58px 0 0 500px;}
+.overlay .cont .icono { width:120px; float:left;}
+.overlay .cont .texto { width:370px; float:right;}
+.overlay .cont .texto h1 { font-weight: 900; color:#000; font-size:30px; margin-bottom:10px; text-transform:uppercase;font-family: 'Lato', sans-serif;}
+.overlay .cont .texto p { font-family:Tahoma, Geneva, sans-serif; font-size:13px; line-height:17px; color:#333;}
+.overlay .cont .texto p strong { font-weight:bold;}
+.overlay .cont .texto p a { color:#000;}
 
-
-/********************************************  MOVIL
-***************************************************/
-
-
-
-@media screen and (max-width: 500px){
-	
-.wrap { width:100%; margin:0px auto;}
-.column_1 { width:100%; display:block; float:none;}
-.column_2 { width:100%; display:block; clear:both; float:none;}
-.column_3 { width:100%; display:block; clear:both; float:none;}
-.column_4 { width:90%; margin:0px auto; float:none;}	
-
-.bases { width:200px; margin:-60px auto 0 auto}
-.bases p { display:none;}
-
-/**** HOME movil */
-#intro .wrap {  height:850px;  background:#3a3a3a url(../images/bg01.jpg) no-repeat bottom right;}
-#intro .logo img { width:70%}
-#intro .pasos { width:95%; display:block; margin:20px 0; text-align:center}
-#intro h1 { font-weight:900; text-transform:uppercase; font-size:16px; text-align:center; text-shadow:0 1px 0 #ccc; letter-spacing:1px; line-height:30px; margin-bottom:10px;}
-#intro h1 span { display:block;font-weight:900; text-transform:uppercase; font-size:35px;}
-a.btn_participar { margin:400px 0 0 35px; }
-
-/**** REGISTRO movil */
-
-#registro .contenido { padding:10px; background:url(../images/overlay1.png); margin-bottom:200px;}
-#registro form { display:block; padding:0;}
-#registro .logo img { width:70%}
-
-
-/**** JUEGO movil */
-
-#juego .pasajeros { padding:30px; width:auto; margin:0 0 20px 0 !important;}
-#juego .premios img { width:95%}
-#juego h1 { margin-bottom:10px;}
-#juego .propio { border:solid 1px #FC0 !important;}
-#juego .pasajeros li a.user{ margin:7px;}
-#juego .pasajeros li:first-child  a.user{ margin:7px !important;}
-#juego .carga { background:url(../images/carga.png) no-repeat -110px 0; height:283px; margin-bottom:50px; font-size:30px; color:#fff;}
-#juego .carga form { padding:160px 0 0 60px;}
-
-/**** POP UP movil */
-
-#pop .wrap { background:#373737; padding:0; width:100%; padding:20px 0}
-#pop .content { background:#e5e5e5 url(../images/pop.jpg) no-repeat; padding:20px 30px !important;box-shadow:3px 3px 10px #000; position:relative; margin:20px;}
-#pop .content h2 { font-size:26px; font-weight:900; margin:30px 0 20px 0; text-transform:uppercase; color:#272727;}
-#pop .content h3 { font-size:14px; font-weight:900; margin-bottom:20px; text-transform:uppercase; color:#272727;}
-#pop .content p {font-size:12px; padding-bottom:15px;color:#7e7e7e; line-height:16px;}
-#pop .content .scroll { display:block !important; overflow:visible; height:auto;}
-a.close { background:url(../images/close.png) no-repeat; width:58px; height:58px; display:block; position:absolute; right:-10px; margin-top:-55px; text-indent:-9999px;}
-#pop .content .imag img { width:100%; text-align:center}
-
-
-
-ul.ranking li .avatar { width:30px; float:left;}
-ul.ranking li .info { width:150px; position:relative; float:left; margin-left:10px; font-size:14px;font-family: 'Lato', sans-serif; color:#000; font-weight:900;}
-ul.ranking li .info span { display:block; padding-top:3px;  font-size:11px; color:#666}
-ul.ranking li .posicion { font-size:16px;font-family: 'Lato', sans-serif; color:#000; font-weight:900; float:right; padding:0px 10px 0 0 ; color:#fff; text-shadow:0 -1px 0 #999}
-ul.ranking li.win .info span { display:block; padding-top:10px;  font-size:14px; color:#ccc}
-
-ul.ranking li .premio span { float:right; margin:0 0 0 0}
-}
+input.error { border:solid 2px #C00 !important; color:#C00;}
+.popup { display: none; }

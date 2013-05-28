@@ -28,12 +28,12 @@ class sfWidgetFormPromoCode extends sfWidgetFormInputText
 		$minutesPart  = isset($codeParts[2])?$codeParts[2]:'';
 		$lotePart  = isset($codeParts[3])?$codeParts[3]:'';
 		
-		$dateTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 6, 'maxlength' => 6, 'name' => $name.'[date]', 'value' => $datePart), $attributes));
-		$hourTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 2, 'maxlength' => 2, 'name' => $name.'[hour]', 'value' => $hourPart), $attributes));
+		$dateTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 4, 'maxlength' => 6, 'name' => $name.'[date]', 'value' => $datePart), $attributes));
+		$hourTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 1, 'maxlength' => 2, 'name' => $name.'[hour]', 'value' => $hourPart), $attributes));
 		$minutesTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 2, 'maxlength' => 2, 'name' => $name.'[minutes]', 'value' => $minutesPart), $attributes));
-		$loteTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 2, 'maxlength' => 2, 'name' => $name.'[lote]', 'value' => $lotePart), $attributes));
+		$loteTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 1, 'maxlength' => 2, 'name' => $name.'[lote]', 'value' => $lotePart), $attributes));
 		
-		$html = $dateTag.'&nbsp;&nbsp;&nbsp;'.$hourTag.'&nbsp;'.$minutesTag.'&nbsp;&nbsp;&nbsp;'.$loteTag;
+		$html = '<label>'.$dateTag.'</label><label>'.$hourTag.':'.$minutesTag.'</label><label>'.$loteTag.'</label>';
 		
 		return $html;						
 	}

@@ -30,6 +30,7 @@ class homeActions extends sfActions
 	public function executeIndex(sfWebRequest $request)
 	{			
 		//$this->getUser()->signOut();die;
+		//Si vengo desde una notificacion, redirijo a la TAB URL
 		if($request->hasParameter('fb_source') && $request->getParameter('fb_source') == 'notification')
 		{
 			return $this->renderText("<script>top.location.href='".sfConfig::get('app_facebook_tab_url')."'</script>");
@@ -44,7 +45,7 @@ class homeActions extends sfActions
 			//$this->redirect(sfConfig::get('app_facebook_tab_url'));
 		}
 			
-		//if the user like is on facebook and not like the facebook page, redirect
+		//if the user is on facebook and not like the facebook page, redirect
 		if($isOnFacebook && $this->getUser()->isPageLike() !== true)
 		{
 			$this->redirect('prelike');
@@ -54,10 +55,17 @@ class homeActions extends sfActions
 		$this->redirectUnless($this->getUser()->isAuthenticated(), '@facebook_signin?forward='.urlencode($request->getUri()));
 		
 		//Check if the user has the profile
-		$this->redirectUnless($this->getUser()->hasProfile(), 'create_profile');
-				
+		$this->redirectUnless($this->getUser()->isAuthenticated() && $this->getUser()->hasProfile(), 'create_profile');
+
+		//if is the first time that the user see the game, redirecto to pregame
+		$this->redirectIf($this->getUser()->isFirstTimeOnGame(), 'pregame');		
+		
 		//START THE HOMEPAGE ACTION		
-		$this->airplaneUsers = sfGuardUserTable::getInstance()->getUsersOrderByPosition(23);
+		$this->totalAirplaneUsers = sfConfig::get('app_game_total_airplane_users');
+		$this->totalOutsideUsers = sfConfig::get('app_game_total_outside_users');
+		$this->airplaneUsers = sfGuardUserTable::getInstance()->getUsersOrderByPosition($this->totalAirplaneUsers);
+		$this->outsideUsers = sfGuardUserTable::getInstance()->getUsersBetweenPosition($this->totalAirplaneUsers+1, $this->totalAirplaneUsers+$this->totalOutsideUsers);
+		
 		$this->isOnAirplane = false;
 		foreach($this->airplaneUsers as $airplaneUser)
 		{
@@ -79,12 +87,25 @@ class homeActions extends sfActions
 			return 'SuccessMobile';
 		}*/
 	}
+	
+	public function executePregame(sfWebRequest $request)
+	{
+		$this->getUser()->setIsFirstTimeOnGame(false);
+	}
 		
 	public function executeAirplaneUsers(sfWebRequest $request)
 	{
-		$airplaneUsers = sfGuardUserTable::getInstance()->getUsersOrderByPosition(23);
+		$totalAirplaneUsers = sfConfig::get('app_game_total_airplane_users');
+		$totalOutsideUsers = sfConfig::get('app_game_total_outside_users');
+		$airplaneUsers = sfGuardUserTable::getInstance()->getUsersOrderByPosition($totalAirplaneUsers);
+		$outsideUsers = sfGuardUserTable::getInstance()->getUsersBetweenPosition($totalAirplaneUsers+1, $totalAirplaneUsers+$totalOutsideUsers);
 		
-		return $this->renderPartial('home/airplaneUsers', array('airplaneUsers' => $airplaneUsers));
+		return $this->renderPartial('home/airplaneUsers', array(
+				'airplaneUsers' => $airplaneUsers, 
+				'outsideUsers' => $outsideUsers,
+				'totalAirplaneUsers' => $totalAirplaneUsers,
+				'totalOutsideUsers' => $totalOutsideUsers
+		));
 	}
 	
 	public function executeWinners(sfWebRequest $request)
@@ -169,8 +190,8 @@ class homeActions extends sfActions
 								$desplacedUser->setFacebookNotification($message);
 							}
 							
-							//$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');
-							$this->redirect('congratulations');
+							$this->getUser()->setFlash('success', 'Felicitaciones, el c&oacute;digo fu&eacute; ingresado correctamente, est&aacute;s dentro del avi&oacute;n.');
+							$this->redirect('homepage');
 							
 						} catch (Doctrine_Exception $e)
 						{

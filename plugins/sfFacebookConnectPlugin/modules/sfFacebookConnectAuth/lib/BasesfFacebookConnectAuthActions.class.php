@@ -91,14 +91,9 @@ class BasesfFacebookConnectAuthActions extends sfActions
 				$user->setAttribute('referer', $user->getUrlAfterLogin());
 			}
 
-			//If not force to login, only show the facebook connect view
-			$facebook = sfFacebook::getFacebookClient();
-					
-			$this->facebookConnectUrl = $facebook->getLoginUrl(array(
-				'scope' => 'email, publish_actions, manage_notifications'
-			));
+			$this->redirect('@create_profile');			
 							
-			return sfView::SUCCESS;
+			//return sfView::SUCCESS;
 		}
 		// the user exists in unactivated mode
 		else

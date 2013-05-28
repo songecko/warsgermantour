@@ -217,7 +217,7 @@ class sfGuardUserTable extends PluginsfGuardUserTable
     {
     	$q = $this->createQuery('u');
     	$q->leftJoin('u.Profile p');
-	$q->andWhere('p.points > 0');
+		$q->andWhere('p.points > 0');
     	$q->orderBy('p.position ASC');
     
     	if($limit)
@@ -229,7 +229,7 @@ class sfGuardUserTable extends PluginsfGuardUserTable
     }
     
     /**
-     * @param unknown_type $limit
+     * @param int $limit
      * @return Doctrine_Collection
      */
     public function getUsersOrderByPosition($limit = false)
@@ -286,4 +286,22 @@ class sfGuardUserTable extends PluginsfGuardUserTable
     {
     	return $this->getUserOnPositionQuery($position)->fetchOne();
     }
+    
+    public function getUsersBetweenPositionQuery($startPosition, $endPosition)
+    {
+    	$q = $this->createQuery('u');
+    	$q->leftJoin('u.Profile p');
+    	$q->andWhere('p.position >= ?', $startPosition);
+    	$q->andWhere('p.position <= ?', $endPosition);
+    	$q->orderBy('p.position ASC');
+    
+    	return $q;
+    }
+    
+    public function getUsersBetweenPosition($startPosition, $endPosition)
+    {
+    	return $this->getUsersBetweenPositionQuery($startPosition, $endPosition)->execute();
+    }
+    
+    
 }
