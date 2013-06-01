@@ -94,7 +94,9 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
 	{
 		$user = $this->getUser();
 		//$this->redirectUnless($user->isAuthenticated() && $user->hasProfile(), 'homepage');
-			
+
+		$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $request->getHttpHeader('User-Agent')) && !$this->getUser()->getAttribute('fullversion', false));
+		
 		if($user->isAuthenticated())
 		{
 			$this->form = new RegisterForm($user->getGuardUser()->Profile);
@@ -147,6 +149,11 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
 					}
 				}
 			}
+		}
+		
+		if ($isMobile)
+		{
+			$this->setLayout('mobile_layout');
 		}
 	}
 }

@@ -9,7 +9,7 @@
 	<?php endforeach;?>
 	<?php for($i; $i <= $totalAirplaneUsers; $i++): ?>
     <div class="participante p_<?php echo $i ?>">
-    	<span class="belt"></span>
+    	<!--<span class="belt"></span>-->
     	<img src="<?php echo image_path('avatar.jpg')?>" alt="avatar" />
     </div>
     <?php endfor; ?>

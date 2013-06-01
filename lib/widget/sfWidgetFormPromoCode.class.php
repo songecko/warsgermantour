@@ -33,7 +33,7 @@ class sfWidgetFormPromoCode extends sfWidgetFormInputText
 		$minutesTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 2, 'maxlength' => 2, 'name' => $name.'[minutes]', 'value' => $minutesPart), $attributes));
 		$loteTag = $this->renderTag('input', array_merge(array('type' => $this->getOption('type'), 'size' => 1, 'maxlength' => 2, 'name' => $name.'[lote]', 'value' => $lotePart), $attributes));
 		
-		$html = '<label>'.$dateTag.'</label><label>'.$hourTag.':'.$minutesTag.'</label><label>'.$loteTag.'</label>';
+		$html = '<label>'.$dateTag.'</label><label>'.$hourTag.'</label>:<label>'.$minutesTag.'</label></label><label>'.$loteTag.'</label>';
 		
 		return $html;						
 	}

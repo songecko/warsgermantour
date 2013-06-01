@@ -12,13 +12,21 @@ class homeActions extends sfActions
 {
 	public function preExecute()
 	{
+		$request = $this->getRequest(); 
+	
 		if($this->getUser()->hasFlash('success'))
 		{
 			$this->success = $this->getUser()->getFlash('success');
+		}else if ($request->hasParameter('success'))
+		{
+			$this->success = $request->getParameter('success');
 		}
 		if($this->getUser()->hasFlash('error'))
 		{
 			$this->error = $this->getUser()->getFlash('error');
+		}else if ($request->hasParameter('error'))
+		{
+			$this->error = $request->getParameter('error');
 		}
 	}
 	
@@ -80,17 +88,22 @@ class homeActions extends sfActions
 			$this->form->bind($request->getParameter($this->form->getName()));
 		}
 		
-		/*if ($isMobile)
+		if ($isMobile)
 		{
 			$this->setLayout('mobile_layout');
-			
-			return 'SuccessMobile';
-		}*/
+		}
 	}
 	
 	public function executePregame(sfWebRequest $request)
 	{
 		$this->getUser()->setIsFirstTimeOnGame(false);
+		
+		$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $request->getHttpHeader('User-Agent')) && !$this->getUser()->getAttribute('fullversion', false));
+		
+		if ($isMobile)
+		{
+			$this->setLayout('mobile_layout');
+		}
 	}
 		
 	public function executeAirplaneUsers(sfWebRequest $request)
@@ -178,7 +191,7 @@ class homeActions extends sfActions
 							$this->user->Profile->moveToFirst();
 							
 							//Send facebook Post
-							$tabUrl = sfConfig::get('app_facebook_tab_url');
+							$tabUrl = "www.WarsteinerMasterTour.com";//sfConfig::get('app_facebook_tab_url');
 							$message = "Estoy participando por un viaje a Alemania en el German Master Tour de Warsteiner.";
 							$this->user->Profile->publishFacebookPost($message, $tabUrl);
 							
@@ -207,6 +220,7 @@ class homeActions extends sfActions
 				}
 			}else
 			{
+				$request->setParameter('error', 'Hubo un problema al cargar el c&oacute;digo, vuelva a intentarlo mas tarde.');
 				$this->forward('home', 'index');
 			}		
 		}

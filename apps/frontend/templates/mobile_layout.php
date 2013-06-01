@@ -3,34 +3,39 @@
   <head>
     <?php include_http_metas() ?>
     <?php include_metas() ?>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="width=500;initial-scale=1.0; minimum-scale=1.0;maximum-scale=1.0; user-scalable=1;"/>
     <?php include_title() ?>
-    
-	<link rel="shortcut icon" href="http://wwwrollingstones.wpengine.netdna-cdn.com/wp-content/themes/rolling-stones-2012/img/fav/favicon.ico?ver=38" />
-
+   
 	<link href="<?php echo _compute_public_path('mobile.css', 'css', 'css') ?>" rel="stylesheet" type="text/css" />
-    
-    <script type="text/javascript">
-    window.addEventListener("load",function() {
-      setTimeout(function(){
-        window.scrollTo(0, 1);
-      }, 0);
-    });
-	</script>	
-  </head>
-  <body>
-    <?php echo $sf_content ?>
-	
 	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-36234528-1']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+    	<?php
+	$isMobile = (preg_match('#^(?!.*iPad).*(Mobile|Jasmine|Symbian|NetFront|BlackBerry|Opera Mini|Opera Mobi).*$#i', $sf_request->getHttpHeader('User-Agent')) && !$sf_user->getAttribute('fullversion', false));		
+	if(!$isMobile):
+	?>
+    if (window.self === window.top) window.location = '<?php echo sfConfig::get('app_facebook_tab_url') ?>';
+    <?php endif; ?>
+	$(document).ready(function()
+	{
+		$('.popup a.btn_close').click(function(e){
+			$(this).parents('.popup').hide();
+			e.preventDefault();
+		});
+	});
 	</script>
+  </head>
+  <?php include_slot('body_tag', '<body>') ?>
+	<div id="fb-root"></div>
+	
+	<!-- POPUPS -->
+	<?php include_partial('global/popups') ?>
+	
+	<div class="wrap clearfix">	
+    	<?php echo $sf_content ?>		
+	</div>
+	<div class="footer clearfix">
+		<p>Promoción válida en Argentina desde el 01.04.2013 hasta el 31.05.2013 . Ver bases y condiciones en www.warsteiner.com.ar. Sin obligación de compra. Fotos a modo ilustrativo. No acumulable con otras promociones. Organiza Cervecería Argentina S.A. Isenbeck, CUIT N° 30-66198200-0, con domicilio en la Avenida Leandro N. Alem 928, Piso 7, Oficina 721, Ciudad de Buenos Aires. Teléfono 0800-888-8500. BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</p>
+		<img src="<?php echo image_path('botones.png')?>" />
+	</div>
+	<script type="text/javascript" src="https://connect.facebook.net/es_ES/all.js"></script>
   </body>
 </html>

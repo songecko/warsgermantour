@@ -7,7 +7,7 @@
 			<h1>error!</h1>
 			<p>
 				<strong>Código no valido o erroneo.</strong><br />
-				Asegurate de ingresar los campos del código correctamente. Sino escribinos a <a href="#1">info@germanmastertour.com</a>
+				Asegurate de ingresar los campos del código correctamente. Sino escribinos a <a href="mailto:info@warsteinermastertour.com">info@warsteinermastertour.com</a>
 			</p>
 		</div>
 	</div>
